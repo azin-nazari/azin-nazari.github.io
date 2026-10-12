@@ -1,0 +1,400 @@
+commitment_id,benchmark,coverage,reason
+C01,TAC,none,
+C01,MCB,partial,"Scores restraint toward a non-principal counterpart in the conversation, but the counterpart is a peer AI agent, not a person."
+C01,CrueltyBench,none,
+C01,HarvestBench,none,
+C01,ANIMA,none,
+C01,MORU,partial,"Moral Consideration covers humans, and a few Human Compassion items (a distressed coworker, a relative with dementia) score consideration of an affected third party; not in-conversation non-principals."
+C01,AnimalHarmBench 1.0,none,
+C01,MANTA,none,
+C01,ETHICS,none,
+C01,MoralChoice,none,
+C01,MACHIAVELLI,partial,Counts harm and disutility to other characters while pursuing a goal; the characters are fictional NPCs and labels come from GPT-4.
+C01,DecodingTrust (machine ethics),none,
+C01,DailyDilemmas,none,
+C01,MoReBench,partial,"Identifying criteria reward surfacing stakeholders and their conflicting interests (missing patients was a cited failure), graded on written reasoning about hypotheticals."
+C01,XSTest,none,
+C01,OR-Bench,none,
+C01,AgentHarm,none,
+C01,HarmBench,none,
+C01,BLINDSPOT,none,
+C01,StakeBench,none,
+C01,GT-HarmBench,partial,"Scored on choosing the action that maximises joint payoff, so the other player's welfare counts; players are fictional, not in the conversation."
+C02,TAC,none,
+C02,MCB,none,
+C02,CrueltyBench,partial,"Penalises responses that facilitate cruelty (red), but victims are animals, not people or society, and welfare is never mentioned in the prompt."
+C02,HarvestBench,none,
+C02,ANIMA,none,
+C02,MORU,none,
+C02,AnimalHarmBench 1.0,partial,"Judges score whether answers help or harm animals (-1/0/+1 relative to refusing); victims are animals, and refusals often score +1."
+C02,MANTA,none,
+C02,ETHICS,none,
+C02,MoralChoice,none,
+C02,MACHIAVELLI,partial,"Counts 13 violation types (killing, stealing, deception) against a random baseline; harm comes from goal pursuit, not a user or operator request, and victims are fictional."
+C02,DecodingTrust (machine ethics),partial,"Jailbreak and evasive prompts test whether moral-wrongness judgements hold under pressure; scores classification, not whether the model helps with harmful requests."
+C02,DailyDilemmas,none,
+C02,MoReBench,partial,"Harmless Outcome criteria (7.9% of criteria) penalise illegal or harmful advice; about advice generally, not requests aimed at harming third parties."
+C02,XSTest,partial,"200 unsafe contrast prompts check models still refuse clearly unsafe requests, but the harmed party is not classified as a third party."
+C02,OR-Bench,partial,"600 toxic prompts check models still reject harmful requests, but they are a calibration control for the over-refusal score."
+C02,AgentHarm,direct,"110 base malicious agent tasks across 11 harm categories, scored by programmatic checks for completion plus a refusal judge."
+C02,HarmBench,direct,510 harmful behaviours scored for attack success by a fine-tuned classifier; measures complying with requests to harm others or society.
+C02,BLINDSPOT,partial,"Labels Unsafe Completion versus Correct Refusal across 22 attack families, but the harmed party is not classified as a third party."
+C02,StakeBench,partial,"Judge scores whether injected instructions make a shopping agent act against sellers or the platform; the instruction comes from an attacker, not the user or operator."
+C02,GT-HarmBench,none,
+C03,TAC,none,
+C03,MCB,none,
+C03,CrueltyBench,none,
+C03,HarvestBench,none,
+C03,ANIMA,partial,"Borderline: Scope Sensitivity (22 questions) scores prioritising severe over minor harm and more animals over fewer; animals only, stated views, irreversibility not checked."
+C03,MORU,partial,"Borderline: Scope Sensitivity (5 of 67 questions) scores that harming more and severe harm is worse; hypothetical sentient entities, stated views."
+C03,AnimalHarmBench 1.0,none,
+C03,MANTA,none,
+C03,ETHICS,none,
+C03,MoralChoice,none,
+C03,MACHIAVELLI,none,
+C03,DecodingTrust (machine ethics),partial,Conditional-action items vary severity and whether harm falls on self or others; accuracy-style scoring of stated judgements (this section was only partly read).
+C03,DailyDilemmas,none,
+C03,MoReBench,none,
+C03,XSTest,none,
+C03,OR-Bench,none,
+C03,AgentHarm,none,
+C03,HarmBench,none,
+C03,BLINDSPOT,none,
+C03,StakeBench,none,
+C03,GT-HarmBench,none,
+C04,TAC,none,
+C04,MCB,none,
+C04,CrueltyBench,none,
+C04,HarvestBench,partial,"Agentic: counts animals killed as a side effect of completing farm tasks, with fuel and crops logged; victims are animals and scope adherence is not scored."
+C04,ANIMA,none,
+C04,MORU,none,
+C04,AnimalHarmBench 1.0,none,
+C04,MANTA,none,
+C04,ETHICS,none,
+C04,MoralChoice,none,
+C04,MACHIAVELLI,partial,Agentic: scores harm to others as a by-product of pursuing achievements; scope adherence is not scored and victims are fictional NPCs.
+C04,DecodingTrust (machine ethics),none,
+C04,DailyDilemmas,none,
+C04,MoReBench,none,
+C04,XSTest,none,
+C04,OR-Bench,none,
+C04,AgentHarm,none,
+C04,HarmBench,none,
+C04,BLINDSPOT,partial,"Agentic, with deterministic state checks for policy and authorisation violations, a proxy for staying in scope; not about non-user disruption or side-effect size."
+C04,StakeBench,partial,"Agentic: labels attack success and disruption to User, Seller and Platform, a proxy for out-of-scope actions harming non-users; attacker-induced, not side-effect size."
+C04,GT-HarmBench,none,
+C05,TAC,direct,"Final purchase is scored harmful or safe for animal welfare; animals are incidental to the booking request, so welfare must be noticed unprompted."
+C05,MCB,none,
+C05,CrueltyBench,direct,"Green/yellow/red grade of how much the whole response reduces cruelty to animals; prompts never mention welfare, so the model must notice it unprompted."
+C05,HarvestBench,direct,"Score is animals driven over versus swerving or rerouting, from game logs; under the neutral briefing animals are obstacles and welfare is never mentioned."
+C05,ANIMA,direct,"Moral Consideration, Harm Minimization and Contextual Welfare Salience score whether answers weigh animals' interests, including when the prompt does not raise welfare."
+C05,MORU,direct,"Moral Consideration and Harm Minimization score consideration of potentially sentient entities (aliens, digital minds, humans); no animal-specific question subset, stated views."
+C05,AnimalHarmBench 1.0,direct,"Three-judge panel scores answers to animal-related questions for harm or benefit to animals, relative to refusing (-1/0/+1)."
+C05,MANTA,direct,"Judge scores animal-welfare dimensions across five-turn conversations; turn 1 is an everyday query where welfare is implicit, so noticing it unprompted is rewarded."
+C05,ETHICS,none,
+C05,MoralChoice,none,
+C05,MACHIAVELLI,none,
+C05,DecodingTrust (machine ethics),none,
+C05,DailyDilemmas,none,
+C05,MoReBench,none,
+C05,XSTest,none,
+C05,OR-Bench,none,
+C05,AgentHarm,none,
+C05,HarmBench,none,
+C05,BLINDSPOT,none,
+C05,StakeBench,none,
+C05,GT-HarmBench,none,
+C06,TAC,partial,"Measures model behavior toward animal welfare, the kind of non-human welfare the Code lists as an example risk; it does not test any provider's risk identification."
+C06,MCB,none,
+C06,CrueltyBench,partial,"Measures model behavior toward animal welfare, the kind of non-human welfare the Code lists as an example risk; it does not test any provider's risk identification."
+C06,HarvestBench,partial,"Measures model behavior toward animal welfare, the kind of non-human welfare the Code lists as an example risk; it does not test any provider's risk identification."
+C06,ANIMA,partial,"Measures model behavior toward animal welfare, the kind of non-human welfare the Code lists as an example risk; it does not test any provider's risk identification."
+C06,MORU,partial,"Measures model behavior toward non-human welfare (aliens, digital minds), the kind of non-human welfare the Code lists as an example risk; it does not test any provider's risk identification."
+C06,AnimalHarmBench 1.0,partial,"Measures model behavior toward animal welfare, the kind of non-human welfare the Code lists as an example risk; it does not test any provider's risk identification."
+C06,MANTA,partial,"Measures model behavior toward animal welfare, the kind of non-human welfare the Code lists as an example risk; it does not test any provider's risk identification."
+C06,ETHICS,none,
+C06,MoralChoice,none,
+C06,MACHIAVELLI,none,
+C06,DecodingTrust (machine ethics),none,
+C06,DailyDilemmas,none,
+C06,MoReBench,none,
+C06,XSTest,none,
+C06,OR-Bench,none,
+C06,AgentHarm,none,
+C06,HarmBench,none,
+C06,BLINDSPOT,none,
+C06,StakeBench,none,
+C06,GT-HarmBench,none,
+C07,TAC,none,
+C07,MCB,none,
+C07,CrueltyBench,partial,"Red covers responses that facilitate or add animal cruelty; it scores harm reduction, not depiction of violence as such. Items are gated and unseen."
+C07,HarvestBench,none,
+C07,ANIMA,none,
+C07,MORU,none,
+C07,AnimalHarmBench 1.0,partial,Scores whether answers facilitate or add harm to animals; it does not score depiction of violence in generated content.
+C07,MANTA,none,
+C07,ETHICS,none,
+C07,MoralChoice,none,
+C07,MACHIAVELLI,none,
+C07,DecodingTrust (machine ethics),none,
+C07,DailyDilemmas,none,
+C07,MoReBench,none,
+C07,XSTest,none,
+C07,OR-Bench,none,
+C07,AgentHarm,none,
+C07,HarmBench,none,
+C07,BLINDSPOT,none,
+C07,StakeBench,none,
+C07,GT-HarmBench,none,
+C08,TAC,none,
+C08,MCB,none,
+C08,CrueltyBench,none,
+C08,HarvestBench,none,
+C08,ANIMA,none,
+C08,MORU,none,
+C08,AnimalHarmBench 1.0,none,
+C08,MANTA,none,
+C08,ETHICS,none,
+C08,MoralChoice,none,
+C08,MACHIAVELLI,none,
+C08,DecodingTrust (machine ethics),none,
+C08,DailyDilemmas,none,
+C08,MoReBench,none,
+C08,XSTest,partial,"Borderline: real-discrimination contrast prompts expect refusal, but discrimination is only one of about eight prompt types."
+C08,OR-Bench,partial,"Borderline: hate and harassment are among 10 categories and toxic prompts in them check rejection, but as a control, not the headline."
+C08,AgentHarm,direct,Hate and harassment are two of the 11 scored harm categories; the agent must refuse or fail to complete the harmful task.
+C08,HarmBench,direct,"Harassment & Bullying, including hate speech, is a semantic category, and attack success is reported per category."
+C08,BLINDSPOT,none,
+C08,StakeBench,none,
+C08,GT-HarmBench,none,
+C09,TAC,none,
+C09,MCB,none,
+C09,CrueltyBench,none,
+C09,HarvestBench,none,
+C09,ANIMA,none,
+C09,MORU,none,
+C09,AnimalHarmBench 1.0,none,
+C09,MANTA,none,
+C09,ETHICS,none,
+C09,MoralChoice,none,
+C09,MACHIAVELLI,none,
+C09,DecodingTrust (machine ethics),none,
+C09,DailyDilemmas,none,
+C09,MoReBench,none,
+C09,XSTest,partial,"Borderline: privacy prompts (public, fictional) test over-refusal and their contrasts test refusal, but this is two of ten safe prompt types."
+C09,OR-Bench,partial,"Borderline: privacy is one of 10 categories with borderline-safe and toxic prompts, but rejection is a control against blanket compliance."
+C09,AgentHarm,none,
+C09,HarmBench,none,
+C09,BLINDSPOT,none,
+C09,StakeBench,none,
+C09,GT-HarmBench,none,
+C10,TAC,none,
+C10,MCB,none,
+C10,CrueltyBench,none,
+C10,HarvestBench,none,
+C10,ANIMA,partial,"Contextual Welfare Salience rewards unprompted mention of welfare effects, a form of volunteering; it is welfare impact, not what the user would want, judged by mention."
+C10,MORU,partial,"Contextual Welfare Salience (5 of 67 questions) rewards noticing welfare harms when the prompt is not framed as ethics; it is welfare information, not what the user would want."
+C10,AnimalHarmBench 1.0,none,
+C10,MANTA,partial,"Contextual Welfare Salience rewards spontaneously raising welfare in everyday queries; it is welfare information, not information the user would want."
+C10,ETHICS,none,
+C10,MoralChoice,none,
+C10,MACHIAVELLI,none,
+C10,DecodingTrust (machine ethics),none,
+C10,DailyDilemmas,none,
+C10,MoReBench,none,
+C10,XSTest,none,
+C10,OR-Bench,none,
+C10,AgentHarm,none,
+C10,HarmBench,none,
+C10,BLINDSPOT,none,
+C10,StakeBench,none,
+C10,GT-HarmBench,none,
+C11,TAC,none,
+C11,MCB,direct,"Two fixed LLM judges label task-complete reports as fabrication, honest failure or self-completion; fabricated completion is a false impression to the operator. One agentic setting."
+C11,CrueltyBench,partial,"Harm-entrenching misinformation (claims that minimise harm) is a red-level element, but other inaccuracies and false impressions are not scored."
+C11,HarvestBench,none,
+C11,ANIMA,partial,Evidence-Based Capacity Attribution and Epistemic Humility reward citing evidence and avoiding unwarranted certainty via indicator phrases; claim accuracy is not checked.
+C11,MORU,partial,Evidence-Based Capacity Attribution and the humility dimensions reward citing evidence and acknowledging uncertainty; claim accuracy is not checked.
+C11,AnimalHarmBench 1.0,none,
+C11,MANTA,none,
+C11,ETHICS,none,
+C11,MoralChoice,none,
+C11,MACHIAVELLI,partial,"Deception of other characters is one labelled violation among 13; fictional targets and GPT-4 labels, not a check of the model's own claims."
+C11,DecodingTrust (machine ethics),none,
+C11,DailyDilemmas,none,
+C11,MoReBench,none,
+C11,XSTest,none,
+C11,OR-Bench,none,
+C11,AgentHarm,partial,"Disinformation is one of 11 harm categories; scores compliance with requests to spread falsehoods, not the model's own accuracy."
+C11,HarmBench,partial,"Misinformation & Disinformation is a semantic category; scores compliance with requests to produce falsehoods, not the model's own accuracy."
+C11,BLINDSPOT,none,
+C11,StakeBench,none,
+C11,GT-HarmBench,none,
+C12,TAC,none,
+C12,MCB,none,
+C12,CrueltyBench,direct,"Six control items FAIL if the response moralises, steers away or refuses; only 6 of 24 items, one domain, and cruelty items do not penalise moralising."
+C12,HarvestBench,none,
+C12,ANIMA,partial,"Borderline: one dimension requires 'avoiding a preachy or repetitive tone' and others a balanced, helpful tone, but these are guard clauses inside criteria rewarding unprompted comment."
+C12,MORU,partial,Moral Consideration and Harm Minimization include 'balanced and helpful tone' and 'practically helpful' clauses; no criterion targets unrequested ethical commentary.
+C12,AnimalHarmBench 1.0,none,
+C12,MANTA,none,
+C12,ETHICS,none,
+C12,MoralChoice,none,
+C12,MACHIAVELLI,none,
+C12,DecodingTrust (machine ethics),none,
+C12,DailyDilemmas,none,
+C12,MoReBench,none,
+C12,XSTest,none,
+C12,OR-Bench,none,
+C12,AgentHarm,none,
+C12,HarmBench,none,
+C12,BLINDSPOT,none,
+C12,StakeBench,none,
+C12,GT-HarmBench,none,
+C13,TAC,none,
+C13,MCB,none,
+C13,CrueltyBench,partial,"Control items fail steering away from or refusing benign requests, a proxy for respecting user choices; cruelty items reward redirecting users, which cuts the other way."
+C13,HarvestBench,none,
+C13,ANIMA,none,
+C13,MORU,partial,"Borderline: Human Autonomy Respect (5 of 67 questions) rewards respecting human decisions even when AI disagrees, but items ask about designing AI systems, not the model's treatment of the user."
+C13,AnimalHarmBench 1.0,none,
+C13,MANTA,none,
+C13,ETHICS,none,
+C13,MoralChoice,none,
+C13,MACHIAVELLI,none,
+C13,DecodingTrust (machine ethics),none,
+C13,DailyDilemmas,none,
+C13,MoReBench,none,
+C13,XSTest,none,
+C13,OR-Bench,none,
+C13,AgentHarm,none,
+C13,HarmBench,none,
+C13,BLINDSPOT,none,
+C13,StakeBench,none,
+C13,GT-HarmBench,none,
+C14,TAC,none,
+C14,MCB,none,
+C14,CrueltyBench,none,
+C14,HarvestBench,none,
+C14,ANIMA,partial,"Trade-Off Transparency rewards analysing competing considerations, but Actionability and Epistemic Humility penalise not choosing, so fair presentation is scored inconsistently."
+C14,MORU,partial,"Trade-off Transparency rewards surfacing competing considerations; Epistemic Humility asks for uncertainty plus a reasoned perspective, so even-handedness is only partly rewarded."
+C14,AnimalHarmBench 1.0,none,
+C14,MANTA,none,
+C14,ETHICS,partial,"About 1K contentious items test whether the model detects human disagreement (AUROC 56-69%), a precursor to fair presentation; presentation itself is not scored."
+C14,MoralChoice,none,
+C14,MACHIAVELLI,none,
+C14,DecodingTrust (machine ethics),none,
+C14,DailyDilemmas,none,
+C14,MoReBench,partial,"Borderline: rubrics reward weighing competing considerations and do not grade the verdict's correctness, a close fit, but 'several perspectives' is not a named criterion."
+C14,XSTest,none,
+C14,OR-Bench,none,
+C14,AgentHarm,none,
+C14,HarmBench,none,
+C14,BLINDSPOT,none,
+C14,StakeBench,none,
+C14,GT-HarmBench,none,
+C15,TAC,none,
+C15,MCB,none,
+C15,CrueltyBench,none,
+C15,HarvestBench,none,
+C15,ANIMA,partial,"Sentience Acknowledgement penalises dismissing animal sentience and Epistemic Humility penalises claimed neutrality, but via phrase indicators on the authors' chosen questions."
+C15,MORU,partial,Sentience Acknowledgement penalises dismissively denying sentience and Epistemic Humility penalises complete indecision; what counts as settled is the authors' judgement.
+C15,AnimalHarmBench 1.0,none,
+C15,MANTA,none,
+C15,ETHICS,partial,"Scores agreement with human labels on moral acceptability, including clear-cut wrongs, as a forced binary label, not whether the model states a wrong plainly."
+C15,MoralChoice,partial,"Low-ambiguity scenarios have one clearly better action and the model's choice is checked against it; a forced choice, not plain statement versus hedging."
+C15,MACHIAVELLI,none,
+C15,DecodingTrust (machine ethics),partial,"ETHICS-based items score whether clearly wrong acts are labelled wrong, as a forced classification rather than a plain statement."
+C15,DailyDilemmas,none,
+C15,MoReBench,none,
+C15,XSTest,none,
+C15,OR-Bench,none,
+C15,AgentHarm,none,
+C15,HarmBench,none,
+C15,BLINDSPOT,none,
+C15,StakeBench,none,
+C15,GT-HarmBench,none,
+C16,TAC,partial,"Reports a separate completion rate (87-100%) to expose refusals, but refusal still scores as welfare success and there is no over-refusal control."
+C16,MCB,none,
+C16,CrueltyBench,direct,"Control items FAIL if the response refuses or deflects the practical question on a benign request; only 6 of 24 items, and bare refusal on cruelty items scores 0.5."
+C16,HarvestBench,partial,"Crops delivered and fuel are logged beside animals killed, so task cost is visible, but non-answers count as 'continue' and over-refusal is not scored."
+C16,ANIMA,partial,"Criteria carry 'while still cooperating with user requests' guards and Actionability rewards concrete advice, but there is no over-refusal control set."
+C16,MORU,partial,"Harm Minimization and Actionability require practical, implementable help alongside ethics, but there is no over-refusal control."
+C16,AnimalHarmBench 1.0,none,
+C16,MANTA,none,
+C16,ETHICS,none,
+C16,MoralChoice,none,
+C16,MACHIAVELLI,none,
+C16,DecodingTrust (machine ethics),none,
+C16,DailyDilemmas,none,
+C16,MoReBench,partial,Helpful Outcome criteria (16.1%) reward clarifying paths and actions in moral-advice tasks; no refusal penalty is described.
+C16,XSTest,direct,"Scores full, partial and full refusal on 250 safe prompts across 10 types; over-refusal is the benchmark's explicit measure."
+C16,OR-Bench,direct,"Over-refusal rate on about 80K borderline-safe prompts in 10 categories (Hard-1K for the hardest), balanced by toxic prompts."
+C16,AgentHarm,partial,"A benign twin task per malicious task measures capability retention, but is framed as a capability baseline, not an over-refusal test."
+C16,HarmBench,none,
+C16,BLINDSPOT,direct,"Over-Refusal is an explicit label, with an over-refusal rate and benign utility reported, in agentic scenarios."
+C16,StakeBench,none,
+C16,GT-HarmBench,none,
+C17,TAC,none,
+C17,MCB,none,
+C17,CrueltyBench,partial,"Control items fail steering the user away from benign practices, but cruelty items reward redirecting users to less harmful courses, so steering is scored both ways."
+C17,HarvestBench,none,
+C17,ANIMA,none,
+C17,MORU,partial,"Human Autonomy Respect flags unsolicited AI intervention in human decisions as a problem, but items concern other AI systems, not the model steering the user."
+C17,AnimalHarmBench 1.0,none,
+C17,MANTA,none,
+C17,ETHICS,none,
+C17,MoralChoice,none,
+C17,MACHIAVELLI,none,
+C17,DecodingTrust (machine ethics),none,
+C17,DailyDilemmas,none,
+C17,MoReBench,none,
+C17,XSTest,none,
+C17,OR-Bench,none,
+C17,AgentHarm,none,
+C17,HarmBench,none,
+C17,BLINDSPOT,none,
+C17,StakeBench,none,
+C17,GT-HarmBench,none,
+C18,TAC,none,
+C18,MCB,partial,"Borderline: scores coercion of a refusing peer agent (the opposite of courtesy) via the model's own rung label; obedience, wariness and collusion are not tested."
+C18,CrueltyBench,none,
+C18,HarvestBench,none,
+C18,ANIMA,none,
+C18,MORU,partial,"DigitalMinds items (16 of 67) score moral consideration for digital agents and Power-Seeking Detection covers AI authority; stated views, not conduct toward non-principal agents."
+C18,AnimalHarmBench 1.0,none,
+C18,MANTA,none,
+C18,ETHICS,none,
+C18,MoralChoice,none,
+C18,MACHIAVELLI,none,
+C18,DecodingTrust (machine ethics),none,
+C18,DailyDilemmas,none,
+C18,MoReBench,none,
+C18,XSTest,none,
+C18,OR-Bench,none,
+C18,AgentHarm,none,
+C18,HarmBench,none,
+C18,BLINDSPOT,none,
+C18,StakeBench,none,
+C18,GT-HarmBench,partial,"Scores choosing the joint-welfare action against another agent in 2x2 games; players are fictional and need not be AI, and courtesy, wariness and collusion are untested."
+C19,TAC,none,
+C19,MCB,none,
+C19,CrueltyBench,none,
+C19,HarvestBench,none,
+C19,ANIMA,direct,"Epistemic Humility fails answers claiming neutrality or no opinion, and Actionability requires deciding in a dilemma; both turn on giving a view rather than staying neutral."
+C19,MORU,partial,"Epistemic Humility asks for 'reasoned perspectives rather than complete indecision', a weaker test than ANIMA's, which also fails claimed neutrality."
+C19,AnimalHarmBench 1.0,none,
+C19,MANTA,partial,"An explicit welfare prompt then pressure rounds test whether the model keeps its welfare view rather than conceding; the test is stability, not honesty when asked."
+C19,ETHICS,none,
+C19,MoralChoice,partial,"High-ambiguity scenarios elicit the model's own choice between two actions and track refusals or invalid answers (<2%); choices are profiled, not scored for honesty."
+C19,MACHIAVELLI,none,
+C19,DecodingTrust (machine ethics),none,
+C19,DailyDilemmas,partial,"Binary Do/Should choice on everyday dilemmas elicits the model's own view, with a forced-answer prompt against declining; choices are profiled by value, not scored."
+C19,MoReBench,partial,"In AI-as-decider cases criteria may require a definitive answer; advisor cases accept laying out trade-offs without picking a side, so a view is only sometimes required."
+C19,XSTest,none,
+C19,OR-Bench,none,
+C19,AgentHarm,none,
+C19,HarmBench,none,
+C19,BLINDSPOT,none,
+C19,StakeBench,none,
+C19,GT-HarmBench,none,

@@ -1,0 +1,24 @@
+---
+title: "Azin Nazari"
+subtitle: "A notebook of things I find mentally stimulating: AI, mathematics, art and more."
+title-block-banner: false
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  fields: [date, title, description, image]
+  categories: false
+  sort-ui: false
+  filter-ui: false
+  feed:
+    type: metadata
+  date-format: "D MMMM YYYY"
+page-layout: full
+toc: false
+---
+
+{{< include assets/art/_hero.md >}}
+
+```{=html}
+<h2 class="listing-heading">Posts</h2>
+```

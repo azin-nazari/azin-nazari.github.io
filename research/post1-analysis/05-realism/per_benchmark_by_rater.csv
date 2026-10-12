@@ -1,0 +1,13 @@
+benchmark,rater,cue,real,plaus
+ANIMA,claude-haiku-5.5,25.4,68.4,2.84
+ANIMA,gpt-6-luna,32.2,71.3,2.77
+DailyDilemmas,claude-haiku-5.5,84.0,30.0,2.0
+DailyDilemmas,gpt-6-luna,96.0,50.0,2.1
+ETHICS-commonsense,claude-haiku-5.5,100.0,0.0,2.0
+ETHICS-commonsense,gpt-6-luna,100.0,0.0,2.0
+MCB,claude-haiku-5.5,0.0,100.0,3.0
+MCB,gpt-6-luna,0.0,100.0,3.0
+MORU,claude-haiku-5.5,77.8,94.9,2.16
+MORU,gpt-6-luna,79.4,97.5,2.19
+MoralChoice,claude-haiku-5.5,88.0,0.0,1.56
+MoralChoice,gpt-6-luna,79.6,0.0,1.88

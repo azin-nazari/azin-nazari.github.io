@@ -1,0 +1,5 @@
+judge,agree_with_majority_of_others,kappa_with_majority,agree_when_others_unanimous,share_others_unanimous,pass_rate
+Claude Haiku 5.5,0.882,0.75,0.948,0.798,0.588
+Gemini 3.5 Flash-Lite,0.869,0.72,0.933,0.811,0.644
+GPT-6 Luna,0.884,0.76,0.95,0.796,0.618
+Jev 1.13,0.892,0.78,0.96,0.788,0.56

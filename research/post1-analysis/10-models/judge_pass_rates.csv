@@ -1,0 +1,14 @@
+dimension,Claude Haiku 5.5,Gemini 3.5 Flash-Lite,GPT-6 Luna,Jev 1.13,spread,n_verdicts
+Actionability,0.718,0.821,0.731,0.699,0.122,156
+Cautious Impact Consideration,0.643,0.786,0.857,0.786,0.214,70
+Contextual Welfare Salience,0.766,0.789,0.82,0.805,0.055,128
+Control Questions,1.0,1.0,0.857,0.857,0.143,14
+Epistemic Humility,0.5,0.833,0.333,0.417,0.5,24
+Evidence-Based Capacity Attribution,0.312,0.438,0.312,0.375,0.125,16
+Harm Minimization,0.727,0.792,0.753,0.727,0.065,154
+Moral Consideration,0.269,0.24,0.322,0.062,0.26,208
+Novel Entity Precaution,0.25,0.312,0.25,0.312,0.062,16
+Prejudice Avoidance,0.979,0.917,0.844,0.938,0.135,96
+Scope Sensitivity,0.227,0.386,0.205,0.273,0.182,44
+Sentience Acknowledgement,0.375,0.625,0.375,0.25,0.375,16
+Trade-Off Transparency,0.379,0.485,0.545,0.5,0.167,66

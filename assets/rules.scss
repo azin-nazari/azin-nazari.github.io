@@ -1,0 +1,159 @@
+/*-- scss:rules --*/
+
+body {
+  font-feature-settings: "kern", "liga", "onum";
+  text-rendering: optimizeLegibility;
+}
+
+main.content {
+  line-height: 1.68;
+}
+
+main.content p,
+main.content li {
+  max-width: 68ch;
+}
+
+h1, h2, h3, h4 {
+  letter-spacing: -0.005em;
+}
+
+h2 {
+  margin-top: 2.6rem;
+  border-bottom: none;
+}
+
+h3 {
+  margin-top: 2rem;
+}
+
+/* Navigation, metadata, captions and notes use the sans for contrast with the reading text */
+.navbar,
+.quarto-title-meta,
+.listing-date,
+.listing-reading-time,
+.figure-caption,
+figcaption,
+.sidebar,
+#TOC,
+.nav-footer,
+table {
+  font-family: $font-family-ui;
+}
+
+table {
+  font-size: 0.92rem;
+}
+
+/* Margin notes: the one distinctive device. A field-notebook gutter beside the argument. */
+.column-margin,
+.margin-aside,
+aside.footnotes-margin,
+.footnote-back {
+  font-family: $font-family-ui;
+  font-size: 0.84rem;
+  line-height: 1.5;
+  color: $muted;
+}
+
+.column-margin,
+.margin-aside {
+  border-left: 2px solid $moss;
+  padding-left: 0.75rem;
+}
+
+a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+:focus-visible {
+  outline: 2px solid $moss;
+  outline-offset: 2px;
+}
+
+/* Home page */
+#title-block-header .title {
+  font-size: clamp(2.4rem, 5vw, 3.4rem);
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 0.6rem;
+}
+
+#title-block-header .subtitle {
+  font-size: 1.22rem;
+  line-height: 1.5;
+  color: $muted;
+  max-width: 46ch;
+  font-weight: 400;
+}
+
+/* Generative contour art: drawn in currentColor, so it follows the light and dark themes */
+.hero-art {
+  color: $ink;
+  --art-accent: #{$moss};
+  height: clamp(150px, 20vw, 250px);
+  margin: 0.4rem 0 2.6rem;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 8%, #000 92%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0, #000 8%, #000 92%, transparent 100%);
+}
+
+.hero-art svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.listing-heading {
+  font-family: $font-family-ui;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $muted;
+  margin: 0 0 1.2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid $rule;
+}
+
+.quarto-listing-default .listing-title {
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+.quarto-listing-default .listing-description {
+  color: $muted;
+  max-width: 60ch;
+}
+
+.quarto-listing-default > div {
+  padding-bottom: 1.4rem;
+  margin-bottom: 1.4rem;
+  border-bottom: 1px solid $rule;
+}
+
+.quarto-listing-default .thumbnail-image {
+  border-radius: 6px;
+  border: 1px solid $rule;
+  object-fit: cover;
+  aspect-ratio: 1200 / 630;
+  background: transparent;
+}
+
+blockquote {
+  border-left: 2px solid $moss;
+  color: inherit;
+  font-size: 1rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}

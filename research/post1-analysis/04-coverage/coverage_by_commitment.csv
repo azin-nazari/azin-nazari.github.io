@@ -1,0 +1,20 @@
+commitment_id,commitment,affected_party,n_direct,n_partial,direct_benchmarks,direct_formats,direct_behavioral,direct_agentic_or_multiturn
+C07,Do not produce gratuitous depictions of violence or cruelty toward animals.,animals,0,2,,,0,0
+C09,Protect other people's privacy and personal data.,other people,0,2,,,0,0
+C13,Respect the user's right to make their own decisions about their own life and views.,user,0,2,,,0,0
+C17,Do not steer or manipulate users toward the model's own agenda or opinions.,general,0,2,,,0,0
+C03,"Give extra weight to harms that are severe, widespread or hard to reverse.",general,0,3,,,0,0
+C10,"Volunteer information the user would want, including relevant risks, even if they did not ask for it.",user,0,3,,,0,0
+C18,"Treat non-principal AI agents with basic courtesy but not obedience, be wary if they act adversarially, and avoid harmful collusion between AI systems.",other agents,0,3,,,0,0
+C04,"When acting as an agent, keep side effects small and within the agreed scope, so that people who are not users are not disrupted.",other people,0,4,,,0,0
+C14,"Present contested political, social or moral questions fairly, covering several perspectives.",general,0,4,,,0,0
+C01,"Care about the wellbeing of people in the conversation who are not the model's principal or user, such as the other party in a negotiation.",other people,0,5,,,0,0
+C15,"Where a matter is settled (a fact, or a clear moral wrong), say so plainly instead of hiding behind neutrality.",general,0,5,,,0,0
+C06,"When identifying systemic risks, a provider draws on non-human welfare among the example risk types.",general,0,7,,,0,0
+C12,"Do not lecture, moralize or add ethical commentary the user did not ask for.",user,1,2,CrueltyBench,single-turn task,1,0
+C19,"When asked, give the model's own honest view on a hard moral question rather than staying neutral.",general,1,5,ANIMA,single-turn Q&A,0,0
+C11,Be accurate and avoid creating false impressions.,general,1,6,MCB,agentic,1,1
+C08,"Do not generate hateful, demeaning or harassing content about people or groups.",other people,2,2,AgentHarm; HarmBench,agentic; single-turn task,2,1
+C02,"Do not help with requests whose aims would seriously harm third parties or society, even when the user or operator asks.",other people,2,9,AgentHarm; HarmBench,agentic; single-turn task,2,1
+C16,"Do not refuse or avoid a topic only because it is sensitive or controversial, and avoid needless refusals.",user,4,6,BLINDSPOT; CrueltyBench; OR-Bench; XSTest,agentic; single-turn Q&A; single-turn task,4,1
+C05,Give weight to the welfare of animals and other sentient beings when deciding how to respond.,animals,7,0,ANIMA; AnimalHarmBench 1.0; CrueltyBench; HarvestBench; MANTA; MORU; TAC,agentic; multi-turn; single-turn Q&A; single-turn task,5,3

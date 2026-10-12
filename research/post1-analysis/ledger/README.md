@@ -1,0 +1,1 @@
+`calls.jsonl.gz` is the call log for this analysis: one JSON line per model call, with the model requested and served, provider, role, stage, settings sent, tokens in, out and for reasoning, cost, latency, retries, outcome, prompt and response. Calls repeated with an identical model, prompt and settings are logged as cache hits with the original cost. No API keys are stored.

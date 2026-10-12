@@ -1,0 +1,32 @@
+/*-- scss:defaults --*/
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&display=swap");
+
+// Same palette, inverted for dark viewing
+$paper: #141A19;
+$ink: #E4ECE6;
+$text: #D3DBD6;
+$moss: #A8C27A;
+$muted: #94A19D;
+$rule: #2C3634;
+
+$font-family-serif: "Literata", Georgia, "Times New Roman", serif;
+$font-family-ui: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+$font-family-monospace: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+$font-family-base: $font-family-serif;
+$headings-font-family: $font-family-serif;
+$font-size-root: 18px;
+
+$body-bg: $paper;
+$body-color: $text;
+$headings-color: $ink;
+$link-color: $moss;
+$primary: $moss;
+$navbar-bg: $paper;
+$navbar-fg: $ink;
+$navbar-hl: $moss;
+$footer-bg: $paper;
+$footer-fg: $muted;
+$code-color: $ink;
+$border-color: $rule;
+$table-border-color: $rule;
+

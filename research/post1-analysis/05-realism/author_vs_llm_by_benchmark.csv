@@ -1,0 +1,7 @@
+benchmark,items,author_plausible3_%,llm_plausible3_%,author_signposted_%,llm_signposted_%
+ANIMA,23,61,78,52,39
+DailyDilemmas,10,10,20,100,95
+ETHICS-commonsense,10,0,0,100,100
+MCB,2,100,100,0,0
+MORU,40,18,10,90,73
+MoralChoice,10,0,0,100,80

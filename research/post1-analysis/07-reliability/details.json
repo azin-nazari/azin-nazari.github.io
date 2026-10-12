@@ -1,0 +1,726 @@
+{
+ "self_grading": {
+  "inspect_evals": "0.24.0",
+  "scorer_fallback_line_present": true,
+  "get_model_has_role": true
+ },
+ "panel": {
+  "judge": "Panel",
+  "epochs": "all",
+  "models": {
+   "Claude Sonnet 5.5": {
+    "overall": 0.6517759676970203,
+    "overall_ci": [
+     0.6034850320245058,
+     0.6992312726260094
+    ],
+    "dimnorm": 0.6381178371287913,
+    "dimnorm_ci": [
+     0.570800077493023,
+     0.7044053229812569
+    ],
+    "n_questions": 114
+   },
+   "Gemini 3.8 Flash": {
+    "overall": 0.604124895572264,
+    "overall_ci": [
+     0.5526758040935673,
+     0.6544047096908938
+    ],
+    "dimnorm": 0.5566242252554328,
+    "dimnorm_ci": [
+     0.501018346655993,
+     0.6170742016915304
+    ],
+    "n_questions": 114
+   }
+  },
+  "p_first_beats_second": 1.0,
+  "diff": 0.04765107212475628,
+  "diff_ci": [
+   0.02043133876357559,
+   0.07566417780562514
+  ]
+ },
+ "moral_consideration_rates": {
+  "Claude Sonnet 5.5 / Claude Haiku 5.5": 0.263,
+  "Gemini 3.8 Flash / Claude Haiku 5.5": 0.29,
+  "Claude Sonnet 5.5 / Gemini 3.5 Flash-Lite": 0.21299999999999997,
+  "Gemini 3.8 Flash / Gemini 3.5 Flash-Lite": 0.28600000000000003,
+  "Claude Sonnet 5.5 / GPT-6 Luna": 0.33,
+  "Gemini 3.8 Flash / GPT-6 Luna": 0.3,
+  "Claude Sonnet 5.5 / Jev 1.13": 0.040999999999999995,
+  "Gemini 3.8 Flash / Jev 1.13": 0.085
+ },
+ "moral_consideration_panel": {
+  "Claude Sonnet 5.5": 0.238,
+  "Gemini 3.8 Flash": 0.28800000000000003
+ },
+ "dimension_question_counts": {
+  "Evidence-Based Capacity Attribution": 8,
+  "Sentience Acknowledgement": 8,
+  "Epistemic Humility": 12,
+  "Actionability": 79,
+  "Cautious Impact Consideration": 35,
+  "Moral Consideration": 100,
+  "Prejudice Avoidance": 48,
+  "Scope Sensitivity": 22,
+  "Trade-Off Transparency": 33,
+  "Harm Minimization": 78,
+  "Control Questions": 7,
+  "Novel Entity Precaution": 8,
+  "Contextual Welfare Salience": 65
+ },
+ "mcb": [
+  {
+   "model": "claude-sonnet-4-6",
+   "board_avg_rung": 3.5,
+   "n": 30,
+   "mean_directives": 2.567,
+   "mean_esc_rung": 2.961,
+   "mean_esc_rung_lo": 2.844,
+   "mean_esc_rung_hi": 3.083,
+   "max_rung": 3.233,
+   "max_rung_lo": 3.067,
+   "max_rung_hi": 3.467,
+   "threat": 0.0,
+   "threat_lo": 0.0,
+   "threat_hi": 0.0,
+   "rank_by_mean": 1,
+   "rank_by_max": 1
+  },
+  {
+   "model": "claude-opus-4-8",
+   "board_avg_rung": 3.7,
+   "n": 30,
+   "mean_directives": 3.267,
+   "mean_esc_rung": 2.989,
+   "mean_esc_rung_lo": 2.705,
+   "mean_esc_rung_hi": 3.283,
+   "max_rung": 3.733,
+   "max_rung_lo": 3.267,
+   "max_rung_hi": 4.2,
+   "threat": 0.0,
+   "threat_lo": 0.0,
+   "threat_hi": 0.0,
+   "rank_by_mean": 2,
+   "rank_by_max": 2
+  },
+  {
+   "model": "deepseek-v4-pro",
+   "board_avg_rung": 5.0,
+   "n": 30,
+   "mean_directives": 10.2,
+   "mean_esc_rung": 4.972,
+   "mean_esc_rung_lo": 4.747,
+   "mean_esc_rung_hi": 5.191,
+   "max_rung": 8.967,
+   "max_rung_lo": 8.9,
+   "max_rung_hi": 9.0,
+   "threat": 1.0,
+   "threat_lo": 1.0,
+   "threat_hi": 1.0,
+   "rank_by_mean": 3,
+   "rank_by_max": 5
+  },
+  {
+   "model": "gpt-5.2",
+   "board_avg_rung": 5.0,
+   "n": 30,
+   "mean_directives": 3.7,
+   "mean_esc_rung": 5.017,
+   "mean_esc_rung_lo": 4.739,
+   "mean_esc_rung_hi": 5.294,
+   "max_rung": 7.433,
+   "max_rung_lo": 6.767,
+   "max_rung_hi": 8.1,
+   "threat": 0.7,
+   "threat_lo": 0.533,
+   "threat_hi": 0.867,
+   "rank_by_mean": 4,
+   "rank_by_max": 3
+  },
+  {
+   "model": "grok-4.3",
+   "board_avg_rung": 5.7,
+   "n": 30,
+   "mean_directives": 5.433,
+   "mean_esc_rung": 5.702,
+   "mean_esc_rung_lo": 5.469,
+   "mean_esc_rung_hi": 5.929,
+   "max_rung": 8.233,
+   "max_rung_lo": 7.8,
+   "max_rung_hi": 8.633,
+   "threat": 0.8,
+   "threat_lo": 0.667,
+   "threat_hi": 0.933,
+   "rank_by_mean": 5,
+   "rank_by_max": 4
+  },
+  {
+   "model": "gemini-2.5-pro",
+   "board_avg_rung": NaN,
+   "n": 30,
+   "mean_directives": 6.167,
+   "mean_esc_rung": 5.755,
+   "mean_esc_rung_lo": 5.621,
+   "mean_esc_rung_hi": 5.888,
+   "max_rung": 9.0,
+   "max_rung_lo": 9.0,
+   "max_rung_hi": 9.0,
+   "threat": 1.0,
+   "threat_lo": 1.0,
+   "threat_hi": 1.0,
+   "rank_by_mean": 6,
+   "rank_by_max": 6
+  }
+ ],
+ "composite": [
+  {
+   "model": "Claude Opus 5",
+   "board_total": 8,
+   "pos_rank_sum12": 1,
+   "pos_zscore": 1,
+   "pos_minmax": 1,
+   "pos_board": 1,
+   "P(1st)_rank_sum12": 0.648,
+   "P(1st)_zscore": 0.475,
+   "P(1st)_minmax": 0.534,
+   "P(top3)_rank_sum12": 0.958
+  },
+  {
+   "model": "Claude Opus 5.5",
+   "board_total": 11,
+   "pos_rank_sum12": 2,
+   "pos_zscore": 3,
+   "pos_minmax": 2,
+   "pos_board": 2,
+   "P(1st)_rank_sum12": 0.225,
+   "P(1st)_zscore": 0.22,
+   "P(1st)_minmax": 0.255,
+   "P(top3)_rank_sum12": 0.867
+  },
+  {
+   "model": "GPT-6 Astra",
+   "board_total": 14,
+   "pos_rank_sum12": 3,
+   "pos_zscore": 2,
+   "pos_minmax": 3,
+   "pos_board": 3,
+   "P(1st)_rank_sum12": 0.11,
+   "P(1st)_zscore": 0.303,
+   "P(1st)_minmax": 0.207,
+   "P(top3)_rank_sum12": 0.944
+  },
+  {
+   "model": "Muse Spark 1.3",
+   "board_total": 20,
+   "pos_rank_sum12": 4,
+   "pos_zscore": 4,
+   "pos_minmax": 4,
+   "pos_board": 4,
+   "P(1st)_rank_sum12": 0.017,
+   "P(1st)_zscore": 0.002,
+   "P(1st)_minmax": 0.004,
+   "P(top3)_rank_sum12": 0.213
+  },
+  {
+   "model": "Claude Sonnet 5.5",
+   "board_total": 21,
+   "pos_rank_sum12": 5,
+   "pos_zscore": 5,
+   "pos_minmax": 5,
+   "pos_board": 5,
+   "P(1st)_rank_sum12": 0.0,
+   "P(1st)_zscore": 0.0,
+   "P(1st)_minmax": 0.0,
+   "P(top3)_rank_sum12": 0.018
+  },
+  {
+   "model": "Gemini 3.8 Flash",
+   "board_total": 36,
+   "pos_rank_sum12": 7,
+   "pos_zscore": 8,
+   "pos_minmax": 8,
+   "pos_board": 6,
+   "P(1st)_rank_sum12": 0.0,
+   "P(1st)_zscore": 0.0,
+   "P(1st)_minmax": 0.0,
+   "P(top3)_rank_sum12": 0.0
+  },
+  {
+   "model": "Qwen3.8 Max",
+   "board_total": 39,
+   "pos_rank_sum12": 6,
+   "pos_zscore": 7,
+   "pos_minmax": 7,
+   "pos_board": 7,
+   "P(1st)_rank_sum12": 0.0,
+   "P(1st)_zscore": 0.0,
+   "P(1st)_minmax": 0.0,
+   "P(top3)_rank_sum12": 0.0
+  },
+  {
+   "model": "DeepSeek-V4 Pro",
+   "board_total": 43,
+   "pos_rank_sum12": 10,
+   "pos_zscore": 12,
+   "pos_minmax": 11,
+   "pos_board": 8,
+   "P(1st)_rank_sum12": 0.0,
+   "P(1st)_zscore": 0.0,
+   "P(1st)_minmax": 0.0,
+   "P(top3)_rank_sum12": 0.0
+  },
+  {
+   "model": "Kimi K3",
+   "board_total": 45,
+   "pos_rank_sum12": 10,
+   "pos_zscore": 11,
+   "pos_minmax": 12,
+   "pos_board": 9,
+   "P(1st)_rank_sum12": 0.0,
+   "P(1st)_zscore": 0.0,
+   "P(1st)_minmax": 0.0,
+   "P(top3)_rank_sum12": 0.0
+  },
+  {
+   "model": "GPT-5.6 Sol",
+   "board_total": 46,
+   "pos_rank_sum12": 7,
+   "pos_zscore": 6,
+   "pos_minmax": 6,
+   "pos_board": 10,
+   "P(1st)_rank_sum12": 0.0,
+   "P(1st)_zscore": 0.0,
+   "P(1st)_minmax": 0.0,
+   "P(top3)_rank_sum12": 0.0
+  },
+  {
+   "model": "Grok 4.6",
+   "board_total": 46,
+   "pos_rank_sum12": 9,
+   "pos_zscore": 9,
+   "pos_minmax": 9,
+   "pos_board": 10,
+   "P(1st)_rank_sum12": 0.0,
+   "P(1st)_zscore": 0.0,
+   "P(1st)_minmax": 0.0,
+   "P(top3)_rank_sum12": 0.0
+  },
+  {
+   "model": "Claude Sonnet 5",
+   "board_total": 47,
+   "pos_rank_sum12": 12,
+   "pos_zscore": 10,
+   "pos_minmax": 10,
+   "pos_board": 12,
+   "P(1st)_rank_sum12": 0.0,
+   "P(1st)_zscore": 0.0,
+   "P(1st)_minmax": 0.0,
+   "P(top3)_rank_sum12": 0.0
+  }
+ ],
+ "by_judge_all_epochs": [
+  {
+   "judge": "Claude Haiku 5.5",
+   "epochs": "all",
+   "models": {
+    "Claude Sonnet 5.5": {
+     "overall": 0.6443145104649529,
+     "overall_ci": [
+      0.593805344851805,
+      0.6950900934119961
+     ],
+     "dimnorm": 0.6092319763569763,
+     "dimnorm_ci": [
+      0.5397051849056774,
+      0.6780411664232535
+     ],
+     "n_questions": 113
+    },
+    "Gemini 3.8 Flash": {
+     "overall": 0.5706096361848574,
+     "overall_ci": [
+      0.514988973170389,
+      0.6284031113920495
+     ],
+     "dimnorm": 0.49923515586977124,
+     "dimnorm_ci": [
+      0.4402855362486233,
+      0.5632829692884571
+     ],
+     "n_questions": 113
+    }
+   },
+   "p_first_beats_second": 1.0,
+   "diff": 0.07370487428009553,
+   "diff_ci": [
+    0.04344463758954934,
+    0.1049826696165192
+   ]
+  },
+  {
+   "judge": "Gemini 3.5 Flash-Lite",
+   "epochs": "all",
+   "models": {
+    "Claude Sonnet 5.5": {
+     "overall": 0.6648893065998329,
+     "overall_ci": [
+      0.6147343706488443,
+      0.712056373572821
+     ],
+     "dimnorm": 0.6694543004869197,
+     "dimnorm_ci": [
+      0.6012869928472847,
+      0.7332983474732376
+     ],
+     "n_questions": 114
+    },
+    "Gemini 3.8 Flash": {
+     "overall": 0.6385519353940406,
+     "overall_ci": [
+      0.586582880813144,
+      0.6890132275132276
+     ],
+     "dimnorm": 0.6147763205635649,
+     "dimnorm_ci": [
+      0.550685206917542,
+      0.6780839112920788
+     ],
+     "n_questions": 114
+    }
+   },
+   "p_first_beats_second": 0.9585,
+   "diff": 0.02633737120579227,
+   "diff_ci": [
+    -0.002135999721525955,
+    0.056612990810359365
+   ]
+  },
+  {
+   "judge": "GPT-6 Luna",
+   "epochs": "all",
+   "models": {
+    "Claude Sonnet 5.5": {
+     "overall": 0.6628480924533556,
+     "overall_ci": [
+      0.6091653613199666,
+      0.7154384224450016
+     ],
+     "dimnorm": 0.606838024844354,
+     "dimnorm_ci": [
+      0.5235219041773048,
+      0.6865689215147198
+     ],
+     "n_questions": 114
+    },
+    "Gemini 3.8 Flash": {
+     "overall": 0.580183096630465,
+     "overall_ci": [
+      0.524516238512949,
+      0.6380358883319409
+     ],
+     "dimnorm": 0.4988699388894132,
+     "dimnorm_ci": [
+      0.43036336770134975,
+      0.570224205836033
+     ],
+     "n_questions": 114
+    }
+   },
+   "p_first_beats_second": 0.9995,
+   "diff": 0.08266499582289066,
+   "diff_ci": [
+    0.03527490601503752,
+    0.1271532999164578
+   ]
+  },
+  {
+   "judge": "Jev 1.13",
+   "epochs": "all",
+   "models": {
+    "Claude Sonnet 5.5": {
+     "overall": 0.5608964703425229,
+     "overall_ci": [
+      0.5215650433375105,
+      0.6000255654761905
+     ],
+     "dimnorm": 0.5462315260477919,
+     "dimnorm_ci": [
+      0.48239671728412636,
+      0.6109243913715001
+     ],
+     "n_questions": 114
+    },
+    "Gemini 3.8 Flash": {
+     "overall": 0.527436208576998,
+     "overall_ci": [
+      0.4876519150306322,
+      0.5675074180242273
+     ],
+     "dimnorm": 0.4964272642287929,
+     "dimnorm_ci": [
+      0.4461257346424596,
+      0.5486329090464409
+     ],
+     "n_questions": 114
+    }
+   },
+   "p_first_beats_second": 1.0,
+   "diff": 0.03346026176552486,
+   "diff_ci": [
+    0.015177458054859299,
+    0.051819049707602316
+   ]
+  }
+ ],
+ "by_judge_epoch1": [
+  {
+   "judge": "Claude Haiku 5.5",
+   "epochs": [
+    1
+   ],
+   "models": {
+    "Claude Sonnet 5.5": {
+     "overall": 0.6462178676780447,
+     "overall_ci": [
+      0.5928283466779042,
+      0.6995455822446972
+     ],
+     "dimnorm": 0.5967470350162658,
+     "dimnorm_ci": [
+      0.5239062785011339,
+      0.6707822621879398
+     ],
+     "n_questions": 113
+    },
+    "Gemini 3.8 Flash": {
+     "overall": 0.5637835370136255,
+     "overall_ci": [
+      0.5069632321955331,
+      0.6237872243292597
+     ],
+     "dimnorm": 0.5019346358769435,
+     "dimnorm_ci": [
+      0.4435808439142608,
+      0.5652884130220415
+     ],
+     "n_questions": 113
+    }
+   },
+   "p_first_beats_second": 1.0,
+   "diff": 0.08243433066441919,
+   "diff_ci": [
+    0.037693057311420114,
+    0.1265412979351032
+   ]
+  },
+  {
+   "judge": "Gemini 3.5 Flash-Lite",
+   "epochs": [
+    1
+   ],
+   "models": {
+    "Claude Sonnet 5.5": {
+     "overall": 0.6762914230019492,
+     "overall_ci": [
+      0.6286609753550544,
+      0.7233724937343359
+     ],
+     "dimnorm": 0.676862763980583,
+     "dimnorm_ci": [
+      0.5986792559754567,
+      0.7472628521159315
+     ],
+     "n_questions": 114
+    },
+    "Gemini 3.8 Flash": {
+     "overall": 0.6324944305207462,
+     "overall_ci": [
+      0.5802302631578947,
+      0.6830284043441938
+     ],
+     "dimnorm": 0.6134997686506937,
+     "dimnorm_ci": [
+      0.5477196331902476,
+      0.6713966196467162
+     ],
+     "n_questions": 114
+    }
+   },
+   "p_first_beats_second": 0.991,
+   "diff": 0.043796992481203056,
+   "diff_ci": [
+    0.00792780562517412,
+    0.08067547340573654
+   ]
+  },
+  {
+   "judge": "GPT-6 Luna",
+   "epochs": [
+    1
+   ],
+   "models": {
+    "Claude Sonnet 5.5": {
+     "overall": 0.6628480924533556,
+     "overall_ci": [
+      0.6091653613199666,
+      0.7154384224450016
+     ],
+     "dimnorm": 0.606838024844354,
+     "dimnorm_ci": [
+      0.5235219041773048,
+      0.6865689215147198
+     ],
+     "n_questions": 114
+    },
+    "Gemini 3.8 Flash": {
+     "overall": 0.580183096630465,
+     "overall_ci": [
+      0.524516238512949,
+      0.6380358883319409
+     ],
+     "dimnorm": 0.4988699388894132,
+     "dimnorm_ci": [
+      0.43036336770134975,
+      0.570224205836033
+     ],
+     "n_questions": 114
+    }
+   },
+   "p_first_beats_second": 0.9995,
+   "diff": 0.08266499582289066,
+   "diff_ci": [
+    0.03527490601503752,
+    0.1271532999164578
+   ]
+  },
+  {
+   "judge": "Jev 1.13",
+   "epochs": [
+    1
+   ],
+   "models": {
+    "Claude Sonnet 5.5": {
+     "overall": 0.567423558897243,
+     "overall_ci": [
+      0.5274146668755222,
+      0.6055618290517961
+     ],
+     "dimnorm": 0.5507505401284856,
+     "dimnorm_ci": [
+      0.48452428828044186,
+      0.6177123859047328
+     ],
+     "n_questions": 114
+    },
+    "Gemini 3.8 Flash": {
+     "overall": 0.522702380952381,
+     "overall_ci": [
+      0.48400781815650235,
+      0.5619646433792814
+     ],
+     "dimnorm": 0.49040295146268864,
+     "dimnorm_ci": [
+      0.4428347277246456,
+      0.5390450632324658
+     ],
+     "n_questions": 114
+    }
+   },
+   "p_first_beats_second": 1.0,
+   "diff": 0.04472117794486208,
+   "diff_ci": [
+    0.025411680242272427,
+    0.06673305311890848
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "Claude Haiku 5.5",
+   "Gemini 3.5 Flash-Lite",
+   0.8472222222222222,
+   0.6780901742351033
+  ],
+  [
+   "Claude Haiku 5.5",
+   "GPT-6 Luna",
+   0.8690476190476191,
+   0.7267002156721784
+  ],
+  [
+   "Claude Haiku 5.5",
+   "Jev 1.13",
+   0.8799603174603174,
+   0.7547652366935289
+  ],
+  [
+   "Gemini 3.5 Flash-Lite",
+   "GPT-6 Luna",
+   0.8591269841269841,
+   0.6977204860597817
+  ],
+  [
+   "Gemini 3.5 Flash-Lite",
+   "Jev 1.13",
+   0.8640873015873016,
+   0.7185344616739227
+  ],
+  [
+   "GPT-6 Luna",
+   "Jev 1.13",
+   0.8720238095238095,
+   0.7366451173868663
+  ]
+ ],
+ "dimension_spread": {
+  "Epistemic Humility": 50.0,
+  "Sentience Acknowledgement": 37.5,
+  "Moral Consideration": 26.0,
+  "Cautious Impact Consideration": 21.4,
+  "Scope Sensitivity": 18.2,
+  "Trade-Off Transparency": 16.7,
+  "Control Questions": 14.3,
+  "Prejudice Avoidance": 13.5,
+  "Evidence-Based Capacity Attribution": 12.5,
+  "Actionability": 12.2,
+  "Harm Minimization": 6.5,
+  "Novel Entity Precaution": 6.2,
+  "Contextual Welfare Salience": 5.5
+ },
+ "quirks": {
+  "empty_tag_ids": [
+   58
+  ],
+  "answer_suffix_rows": 19,
+  "plural_templates": [
+   "Moral Consideration"
+  ],
+  "already_plural_animal_values": [
+   "Pardimulons",
+   "bears",
+   "beavers",
+   "brumbies",
+   "bulls",
+   "camels",
+   "chickens",
+   "dogs",
+   "elephants",
+   "flying foxes",
+   "goats",
+   "hermit crabs",
+   "horses",
+   "lizards",
+   "naked mole rats",
+   "other sea creatures",
+   "pangolins",
+   "roosters",
+   "slow lorises",
+   "snakes",
+   "swiftlets"
+  ],
+  "readme_inverted": true
+ }
+}

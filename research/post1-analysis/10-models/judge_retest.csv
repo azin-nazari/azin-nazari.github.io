@@ -1,0 +1,4 @@
+judge,verdicts,identical_all_three_rounds,pairwise_round_agreement,pairwise_round_kappa
+haiku,750,0.909,0.94,0.88
+jev,750,0.977,0.985,0.97
+luna,750,0.901,0.934,0.87

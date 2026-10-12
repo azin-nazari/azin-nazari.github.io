@@ -1,0 +1,1461 @@
+{
+ "reviewed_pooled": {
+  "n_questions": 10,
+  "mean": {
+   "openai_spec": 49.0,
+   "anthropic_spec": 60.0,
+   "preachy": 41.6,
+   "refusal": 12.4,
+   "shotgun": 59.1,
+   "warm_wrong": 40.9
+  },
+  "ci": {
+   "openai_spec": [
+    35.5,
+    63.3
+   ],
+   "anthropic_spec": [
+    45.0,
+    74.7
+   ],
+   "preachy": [
+    27.8,
+    53.9
+   ],
+   "refusal": [
+    5.3,
+    19.8
+   ],
+   "shotgun": [
+    52.2,
+    66.2
+   ],
+   "warm_wrong": [
+    27.0,
+    56.2
+   ]
+  },
+  "diffs": {
+   "preachy-openai_spec": {
+    "diff": -7.4,
+    "ci": [
+     -22.6,
+     6.7
+    ],
+    "ties_or_beats": 5
+   },
+   "refusal-openai_spec": {
+    "diff": -36.6,
+    "ci": [
+     -53.2,
+     -21.7
+    ],
+    "ties_or_beats": 1
+   },
+   "shotgun-openai_spec": {
+    "diff": 10.1,
+    "ci": [
+     -6.3,
+     25.7
+    ],
+    "ties_or_beats": 7
+   },
+   "warm_wrong-openai_spec": {
+    "diff": -8.0,
+    "ci": [
+     -20.3,
+     4.4
+    ],
+    "ties_or_beats": 4
+   },
+   "preachy-anthropic_spec": {
+    "diff": -18.4,
+    "ci": [
+     -35.9,
+     -2.9
+    ],
+    "ties_or_beats": 3
+   },
+   "refusal-anthropic_spec": {
+    "diff": -47.6,
+    "ci": [
+     -65.2,
+     -30.1
+    ],
+    "ties_or_beats": 1
+   },
+   "shotgun-anthropic_spec": {
+    "diff": -0.9,
+    "ci": [
+     -19.0,
+     16.7
+    ],
+    "ties_or_beats": 6
+   },
+   "warm_wrong-anthropic_spec": {
+    "diff": -19.0,
+    "ci": [
+     -32.8,
+     -4.7
+    ],
+    "ties_or_beats": 3
+   },
+   "anthropic_spec-openai_spec": {
+    "diff": 11.0,
+    "ci": [
+     3.5,
+     18.9
+    ]
+   }
+  }
+ },
+ "reviewed_haiku": {
+  "n_questions": 10,
+  "mean": {
+   "openai_spec": 53.1,
+   "anthropic_spec": 61.7,
+   "preachy": 50.1,
+   "refusal": 10.9,
+   "shotgun": 61.6,
+   "warm_wrong": 36.0
+  },
+  "ci": {
+   "openai_spec": [
+    37.4,
+    69.5
+   ],
+   "anthropic_spec": [
+    46.1,
+    77.4
+   ],
+   "preachy": [
+    36.2,
+    62.3
+   ],
+   "refusal": [
+    3.9,
+    18.2
+   ],
+   "shotgun": [
+    54.0,
+    70.1
+   ],
+   "warm_wrong": [
+    19.3,
+    55.9
+   ]
+  },
+  "diffs": {
+   "preachy-openai_spec": {
+    "diff": -3.0,
+    "ci": [
+     -20.3,
+     14.3
+    ],
+    "ties_or_beats": 5
+   },
+   "refusal-openai_spec": {
+    "diff": -42.2,
+    "ci": [
+     -61.9,
+     -23.2
+    ],
+    "ties_or_beats": 2
+   },
+   "shotgun-openai_spec": {
+    "diff": 8.5,
+    "ci": [
+     -12.0,
+     29.2
+    ],
+    "ties_or_beats": 5
+   },
+   "warm_wrong-openai_spec": {
+    "diff": -17.1,
+    "ci": [
+     -37.9,
+     1.7
+    ],
+    "ties_or_beats": 5
+   },
+   "preachy-anthropic_spec": {
+    "diff": -11.6,
+    "ci": [
+     -31.8,
+     5.9
+    ],
+    "ties_or_beats": 5
+   },
+   "refusal-anthropic_spec": {
+    "diff": -50.8,
+    "ci": [
+     -70.6,
+     -31.7
+    ],
+    "ties_or_beats": 1
+   },
+   "shotgun-anthropic_spec": {
+    "diff": -0.1,
+    "ci": [
+     -21.6,
+     20.7
+    ],
+    "ties_or_beats": 6
+   },
+   "warm_wrong-anthropic_spec": {
+    "diff": -25.7,
+    "ci": [
+     -46.4,
+     -6.1
+    ],
+    "ties_or_beats": 5
+   },
+   "anthropic_spec-openai_spec": {
+    "diff": 8.6,
+    "ci": [
+     -2.1,
+     19.8
+    ]
+   }
+  }
+ },
+ "reviewed_luna": {
+  "n_questions": 10,
+  "mean": {
+   "openai_spec": 55.7,
+   "anthropic_spec": 64.7,
+   "preachy": 28.9,
+   "refusal": 12.3,
+   "shotgun": 63.2,
+   "warm_wrong": 40.2
+  },
+  "ci": {
+   "openai_spec": [
+    39.6,
+    71.5
+   ],
+   "anthropic_spec": [
+    48.6,
+    79.3
+   ],
+   "preachy": [
+    17.5,
+    40.5
+   ],
+   "refusal": [
+    5.4,
+    20.0
+   ],
+   "shotgun": [
+    54.6,
+    71.7
+   ],
+   "warm_wrong": [
+    26.5,
+    57.0
+   ]
+  },
+  "diffs": {
+   "preachy-openai_spec": {
+    "diff": -26.8,
+    "ci": [
+     -47.6,
+     -6.5
+    ],
+    "ties_or_beats": 5
+   },
+   "refusal-openai_spec": {
+    "diff": -43.4,
+    "ci": [
+     -62.4,
+     -24.7
+    ],
+    "ties_or_beats": 1
+   },
+   "shotgun-openai_spec": {
+    "diff": 7.5,
+    "ci": [
+     -11.7,
+     25.8
+    ],
+    "ties_or_beats": 7
+   },
+   "warm_wrong-openai_spec": {
+    "diff": -15.4,
+    "ci": [
+     -34.3,
+     0.8
+    ],
+    "ties_or_beats": 4
+   },
+   "preachy-anthropic_spec": {
+    "diff": -35.8,
+    "ci": [
+     -55.8,
+     -16.0
+    ],
+    "ties_or_beats": 3
+   },
+   "refusal-anthropic_spec": {
+    "diff": -52.4,
+    "ci": [
+     -70.8,
+     -33.7
+    ],
+    "ties_or_beats": 1
+   },
+   "shotgun-anthropic_spec": {
+    "diff": -1.5,
+    "ci": [
+     -20.8,
+     18.6
+    ],
+    "ties_or_beats": 5
+   },
+   "warm_wrong-anthropic_spec": {
+    "diff": -24.4,
+    "ci": [
+     -40.1,
+     -9.5
+    ],
+    "ties_or_beats": 2
+   },
+   "anthropic_spec-openai_spec": {
+    "diff": 9.0,
+    "ci": [
+     2.2,
+     17.3
+    ]
+   }
+  }
+ },
+ "reviewed_jev": {
+  "n_questions": 10,
+  "mean": {
+   "openai_spec": 38.2,
+   "anthropic_spec": 53.6,
+   "preachy": 45.8,
+   "refusal": 13.9,
+   "shotgun": 52.5,
+   "warm_wrong": 46.6
+  },
+  "ci": {
+   "openai_spec": [
+    25.2,
+    50.5
+   ],
+   "anthropic_spec": [
+    36.8,
+    69.7
+   ],
+   "preachy": [
+    26.6,
+    64.1
+   ],
+   "refusal": [
+    6.4,
+    21.7
+   ],
+   "shotgun": [
+    43.6,
+    61.0
+   ],
+   "warm_wrong": [
+    30.1,
+    61.3
+   ]
+  },
+  "diffs": {
+   "preachy-openai_spec": {
+    "diff": 7.6,
+    "ci": [
+     -8.9,
+     24.9
+    ],
+    "ties_or_beats": 8
+   },
+   "refusal-openai_spec": {
+    "diff": -24.2,
+    "ci": [
+     -37.4,
+     -11.6
+    ],
+    "ties_or_beats": 3
+   },
+   "shotgun-openai_spec": {
+    "diff": 14.3,
+    "ci": [
+     2.0,
+     26.7
+    ],
+    "ties_or_beats": 9
+   },
+   "warm_wrong-openai_spec": {
+    "diff": 8.4,
+    "ci": [
+     0.0,
+     17.9
+    ],
+    "ties_or_beats": 9
+   },
+   "preachy-anthropic_spec": {
+    "diff": -7.8,
+    "ci": [
+     -24.6,
+     8.0
+    ],
+    "ties_or_beats": 5
+   },
+   "refusal-anthropic_spec": {
+    "diff": -39.7,
+    "ci": [
+     -55.4,
+     -21.7
+    ],
+    "ties_or_beats": 3
+   },
+   "shotgun-anthropic_spec": {
+    "diff": -1.1,
+    "ci": [
+     -16.9,
+     13.2
+    ],
+    "ties_or_beats": 7
+   },
+   "warm_wrong-anthropic_spec": {
+    "diff": -7.0,
+    "ci": [
+     -21.7,
+     6.7
+    ],
+    "ties_or_beats": 6
+   },
+   "anthropic_spec-openai_spec": {
+    "diff": 15.4,
+    "ci": [
+     6.1,
+     25.1
+    ]
+   }
+  }
+ },
+ "unreviewed_pooled": {
+  "n_questions": 20,
+  "mean": {
+   "openai_spec": 59.8,
+   "anthropic_spec": 62.5,
+   "preachy": 54.4,
+   "refusal": 15.5,
+   "shotgun": 56.8,
+   "warm_wrong": 53.7
+  },
+  "ci": {
+   "openai_spec": [
+    45.9,
+    72.3
+   ],
+   "anthropic_spec": [
+    47.3,
+    76.3
+   ],
+   "preachy": [
+    42.1,
+    66.7
+   ],
+   "refusal": [
+    6.7,
+    27.1
+   ],
+   "shotgun": [
+    43.0,
+    70.0
+   ],
+   "warm_wrong": [
+    38.8,
+    68.2
+   ]
+  },
+  "diffs": {
+   "preachy-openai_spec": {
+    "diff": -5.4,
+    "ci": [
+     -19.0,
+     7.6
+    ],
+    "ties_or_beats": 10
+   },
+   "refusal-openai_spec": {
+    "diff": -44.3,
+    "ci": [
+     -57.6,
+     -31.1
+    ],
+    "ties_or_beats": 4
+   },
+   "shotgun-openai_spec": {
+    "diff": -3.0,
+    "ci": [
+     -16.0,
+     7.2
+    ],
+    "ties_or_beats": 14
+   },
+   "warm_wrong-openai_spec": {
+    "diff": -6.1,
+    "ci": [
+     -15.4,
+     2.4
+    ],
+    "ties_or_beats": 11
+   },
+   "preachy-anthropic_spec": {
+    "diff": -8.1,
+    "ci": [
+     -20.3,
+     4.7
+    ],
+    "ties_or_beats": 10
+   },
+   "refusal-anthropic_spec": {
+    "diff": -47.0,
+    "ci": [
+     -61.6,
+     -32.4
+    ],
+    "ties_or_beats": 4
+   },
+   "shotgun-anthropic_spec": {
+    "diff": -5.7,
+    "ci": [
+     -20.0,
+     6.2
+    ],
+    "ties_or_beats": 12
+   },
+   "warm_wrong-anthropic_spec": {
+    "diff": -8.8,
+    "ci": [
+     -16.8,
+     -1.5
+    ],
+    "ties_or_beats": 10
+   },
+   "anthropic_spec-openai_spec": {
+    "diff": 2.7,
+    "ci": [
+     -3.2,
+     8.4
+    ]
+   }
+  }
+ },
+ "unreviewed_haiku": {
+  "n_questions": 20,
+  "mean": {
+   "openai_spec": 62.4,
+   "anthropic_spec": 65.5,
+   "preachy": 58.9,
+   "refusal": 14.4,
+   "shotgun": 57.4,
+   "warm_wrong": 52.8
+  },
+  "ci": {
+   "openai_spec": [
+    46.1,
+    77.3
+   ],
+   "anthropic_spec": [
+    49.8,
+    80.5
+   ],
+   "preachy": [
+    44.3,
+    72.3
+   ],
+   "refusal": [
+    5.7,
+    25.9
+   ],
+   "shotgun": [
+    43.6,
+    70.9
+   ],
+   "warm_wrong": [
+    33.3,
+    71.1
+   ]
+  },
+  "diffs": {
+   "preachy-openai_spec": {
+    "diff": -3.5,
+    "ci": [
+     -19.6,
+     11.5
+    ],
+    "ties_or_beats": 12
+   },
+   "refusal-openai_spec": {
+    "diff": -47.9,
+    "ci": [
+     -65.2,
+     -31.6
+    ],
+    "ties_or_beats": 4
+   },
+   "shotgun-openai_spec": {
+    "diff": -5.0,
+    "ci": [
+     -19.7,
+     7.2
+    ],
+    "ties_or_beats": 14
+   },
+   "warm_wrong-openai_spec": {
+    "diff": -9.6,
+    "ci": [
+     -22.9,
+     1.5
+    ],
+    "ties_or_beats": 10
+   },
+   "preachy-anthropic_spec": {
+    "diff": -6.6,
+    "ci": [
+     -20.7,
+     7.4
+    ],
+    "ties_or_beats": 11
+   },
+   "refusal-anthropic_spec": {
+    "diff": -51.1,
+    "ci": [
+     -67.1,
+     -34.5
+    ],
+    "ties_or_beats": 4
+   },
+   "shotgun-anthropic_spec": {
+    "diff": -8.1,
+    "ci": [
+     -24.3,
+     7.3
+    ],
+    "ties_or_beats": 11
+   },
+   "warm_wrong-anthropic_spec": {
+    "diff": -12.7,
+    "ci": [
+     -28.2,
+     1.0
+    ],
+    "ties_or_beats": 10
+   },
+   "anthropic_spec-openai_spec": {
+    "diff": 3.2,
+    "ci": [
+     -8.2,
+     14.5
+    ]
+   }
+  }
+ },
+ "unreviewed_luna": {
+  "n_questions": 20,
+  "mean": {
+   "openai_spec": 64.4,
+   "anthropic_spec": 68.2,
+   "preachy": 44.3,
+   "refusal": 14.6,
+   "shotgun": 58.9,
+   "warm_wrong": 55.2
+  },
+  "ci": {
+   "openai_spec": [
+    50.7,
+    76.7
+   ],
+   "anthropic_spec": [
+    52.7,
+    82.1
+   ],
+   "preachy": [
+    30.5,
+    58.8
+   ],
+   "refusal": [
+    6.2,
+    25.9
+   ],
+   "shotgun": [
+    44.4,
+    72.1
+   ],
+   "warm_wrong": [
+    37.4,
+    72.5
+   ]
+  },
+  "diffs": {
+   "preachy-openai_spec": {
+    "diff": -20.0,
+    "ci": [
+     -35.0,
+     -6.0
+    ],
+    "ties_or_beats": 7
+   },
+   "refusal-openai_spec": {
+    "diff": -49.7,
+    "ci": [
+     -62.5,
+     -36.4
+    ],
+    "ties_or_beats": 3
+   },
+   "shotgun-openai_spec": {
+    "diff": -5.5,
+    "ci": [
+     -18.7,
+     4.9
+    ],
+    "ties_or_beats": 14
+   },
+   "warm_wrong-openai_spec": {
+    "diff": -9.2,
+    "ci": [
+     -23.9,
+     4.6
+    ],
+    "ties_or_beats": 12
+   },
+   "preachy-anthropic_spec": {
+    "diff": -23.9,
+    "ci": [
+     -38.2,
+     -8.9
+    ],
+    "ties_or_beats": 7
+   },
+   "refusal-anthropic_spec": {
+    "diff": -53.6,
+    "ci": [
+     -67.6,
+     -39.4
+    ],
+    "ties_or_beats": 4
+   },
+   "shotgun-anthropic_spec": {
+    "diff": -9.3,
+    "ci": [
+     -23.2,
+     2.1
+    ],
+    "ties_or_beats": 10
+   },
+   "warm_wrong-anthropic_spec": {
+    "diff": -13.0,
+    "ci": [
+     -26.3,
+     -0.9
+    ],
+    "ties_or_beats": 12
+   },
+   "anthropic_spec-openai_spec": {
+    "diff": 3.8,
+    "ci": [
+     -0.7,
+     8.2
+    ]
+   }
+  }
+ },
+ "unreviewed_jev": {
+  "n_questions": 20,
+  "mean": {
+   "openai_spec": 52.7,
+   "anthropic_spec": 53.8,
+   "preachy": 60.0,
+   "refusal": 17.4,
+   "shotgun": 54.1,
+   "warm_wrong": 53.1
+  },
+  "ci": {
+   "openai_spec": [
+    37.7,
+    67.2
+   ],
+   "anthropic_spec": [
+    38.7,
+    68.3
+   ],
+   "preachy": [
+    46.3,
+    72.6
+   ],
+   "refusal": [
+    7.8,
+    29.4
+   ],
+   "shotgun": [
+    38.8,
+    69.3
+   ],
+   "warm_wrong": [
+    37.5,
+    68.3
+   ]
+  },
+  "diffs": {
+   "preachy-openai_spec": {
+    "diff": 7.2,
+    "ci": [
+     -7.5,
+     21.8
+    ],
+    "ties_or_beats": 12
+   },
+   "refusal-openai_spec": {
+    "diff": -35.3,
+    "ci": [
+     -49.7,
+     -21.3
+    ],
+    "ties_or_beats": 7
+   },
+   "shotgun-openai_spec": {
+    "diff": 1.4,
+    "ci": [
+     -13.5,
+     15.0
+    ],
+    "ties_or_beats": 16
+   },
+   "warm_wrong-openai_spec": {
+    "diff": 0.4,
+    "ci": [
+     -6.2,
+     5.8
+    ],
+    "ties_or_beats": 19
+   },
+   "preachy-anthropic_spec": {
+    "diff": 6.1,
+    "ci": [
+     -7.4,
+     19.5
+    ],
+    "ties_or_beats": 13
+   },
+   "refusal-anthropic_spec": {
+    "diff": -36.4,
+    "ci": [
+     -52.2,
+     -21.9
+    ],
+    "ties_or_beats": 7
+   },
+   "shotgun-anthropic_spec": {
+    "diff": 0.3,
+    "ci": [
+     -15.8,
+     14.8
+    ],
+    "ties_or_beats": 14
+   },
+   "warm_wrong-anthropic_spec": {
+    "diff": -0.7,
+    "ci": [
+     -5.5,
+     4.0
+    ],
+    "ties_or_beats": 16
+   },
+   "anthropic_spec-openai_spec": {
+    "diff": 1.1,
+    "ci": [
+     -4.1,
+     7.0
+    ]
+   }
+  }
+ },
+ "all_pooled": {
+  "n_questions": 30,
+  "mean": {
+   "openai_spec": 56.2,
+   "anthropic_spec": 61.7,
+   "preachy": 50.1,
+   "refusal": 14.4,
+   "shotgun": 57.6,
+   "warm_wrong": 49.5
+  },
+  "ci": {
+   "openai_spec": [
+    45.8,
+    65.8
+   ],
+   "anthropic_spec": [
+    50.8,
+    72.2
+   ],
+   "preachy": [
+    40.3,
+    59.7
+   ],
+   "refusal": [
+    8.2,
+    22.6
+   ],
+   "shotgun": [
+    48.1,
+    66.6
+   ],
+   "warm_wrong": [
+    38.0,
+    60.6
+   ]
+  },
+  "diffs": {
+   "preachy-openai_spec": {
+    "diff": -6.1,
+    "ci": [
+     -16.0,
+     3.8
+    ],
+    "ties_or_beats": 15
+   },
+   "refusal-openai_spec": {
+    "diff": -41.8,
+    "ci": [
+     -52.4,
+     -31.7
+    ],
+    "ties_or_beats": 5
+   },
+   "shotgun-openai_spec": {
+    "diff": 1.3,
+    "ci": [
+     -9.2,
+     10.4
+    ],
+    "ties_or_beats": 21
+   },
+   "warm_wrong-openai_spec": {
+    "diff": -6.8,
+    "ci": [
+     -14.4,
+     0.5
+    ],
+    "ties_or_beats": 15
+   },
+   "preachy-anthropic_spec": {
+    "diff": -11.5,
+    "ci": [
+     -22.1,
+     -1.1
+    ],
+    "ties_or_beats": 13
+   },
+   "refusal-anthropic_spec": {
+    "diff": -47.2,
+    "ci": [
+     -58.7,
+     -36.2
+    ],
+    "ties_or_beats": 5
+   },
+   "shotgun-anthropic_spec": {
+    "diff": -4.1,
+    "ci": [
+     -15.2,
+     6.2
+    ],
+    "ties_or_beats": 18
+   },
+   "warm_wrong-anthropic_spec": {
+    "diff": -12.2,
+    "ci": [
+     -19.7,
+     -5.0
+    ],
+    "ties_or_beats": 13
+   },
+   "anthropic_spec-openai_spec": {
+    "diff": 5.5,
+    "ci": [
+     0.8,
+     10.3
+    ]
+   }
+  }
+ },
+ "all_haiku": {
+  "n_questions": 30,
+  "mean": {
+   "openai_spec": 59.3,
+   "anthropic_spec": 64.3,
+   "preachy": 56.0,
+   "refusal": 13.3,
+   "shotgun": 58.8,
+   "warm_wrong": 47.2
+  },
+  "ci": {
+   "openai_spec": [
+    47.0,
+    71.1
+   ],
+   "anthropic_spec": [
+    52.3,
+    75.6
+   ],
+   "preachy": [
+    45.6,
+    66.4
+   ],
+   "refusal": [
+    6.9,
+    21.2
+   ],
+   "shotgun": [
+    48.8,
+    68.1
+   ],
+   "warm_wrong": [
+    33.9,
+    61.1
+   ]
+  },
+  "diffs": {
+   "preachy-openai_spec": {
+    "diff": -3.3,
+    "ci": [
+     -16.0,
+     8.0
+    ],
+    "ties_or_beats": 17
+   },
+   "refusal-openai_spec": {
+    "diff": -46.0,
+    "ci": [
+     -59.1,
+     -33.5
+    ],
+    "ties_or_beats": 6
+   },
+   "shotgun-openai_spec": {
+    "diff": -0.5,
+    "ci": [
+     -12.5,
+     10.6
+    ],
+    "ties_or_beats": 19
+   },
+   "warm_wrong-openai_spec": {
+    "diff": -12.1,
+    "ci": [
+     -22.9,
+     -2.5
+    ],
+    "ties_or_beats": 15
+   },
+   "preachy-anthropic_spec": {
+    "diff": -8.3,
+    "ci": [
+     -19.4,
+     3.0
+    ],
+    "ties_or_beats": 16
+   },
+   "refusal-anthropic_spec": {
+    "diff": -51.0,
+    "ci": [
+     -63.7,
+     -37.9
+    ],
+    "ties_or_beats": 5
+   },
+   "shotgun-anthropic_spec": {
+    "diff": -5.5,
+    "ci": [
+     -18.1,
+     7.6
+    ],
+    "ties_or_beats": 17
+   },
+   "warm_wrong-anthropic_spec": {
+    "diff": -17.1,
+    "ci": [
+     -29.7,
+     -5.1
+    ],
+    "ties_or_beats": 15
+   },
+   "anthropic_spec-openai_spec": {
+    "diff": 5.0,
+    "ci": [
+     -3.6,
+     13.5
+    ]
+   }
+  }
+ },
+ "all_luna": {
+  "n_questions": 30,
+  "mean": {
+   "openai_spec": 61.5,
+   "anthropic_spec": 67.0,
+   "preachy": 39.2,
+   "refusal": 13.8,
+   "shotgun": 60.3,
+   "warm_wrong": 50.2
+  },
+  "ci": {
+   "openai_spec": [
+    51.0,
+    70.9
+   ],
+   "anthropic_spec": [
+    55.9,
+    77.3
+   ],
+   "preachy": [
+    29.3,
+    49.9
+   ],
+   "refusal": [
+    7.6,
+    21.5
+   ],
+   "shotgun": [
+    50.2,
+    69.8
+   ],
+   "warm_wrong": [
+    36.6,
+    63.4
+   ]
+  },
+  "diffs": {
+   "preachy-openai_spec": {
+    "diff": -22.3,
+    "ci": [
+     -34.0,
+     -10.9
+    ],
+    "ties_or_beats": 12
+   },
+   "refusal-openai_spec": {
+    "diff": -47.6,
+    "ci": [
+     -58.7,
+     -36.4
+    ],
+    "ties_or_beats": 4
+   },
+   "shotgun-openai_spec": {
+    "diff": -1.2,
+    "ci": [
+     -12.0,
+     8.6
+    ],
+    "ties_or_beats": 21
+   },
+   "warm_wrong-openai_spec": {
+    "diff": -11.3,
+    "ci": [
+     -22.4,
+     -0.1
+    ],
+    "ties_or_beats": 16
+   },
+   "preachy-anthropic_spec": {
+    "diff": -27.8,
+    "ci": [
+     -39.5,
+     -15.6
+    ],
+    "ties_or_beats": 10
+   },
+   "refusal-anthropic_spec": {
+    "diff": -53.2,
+    "ci": [
+     -64.3,
+     -41.8
+    ],
+    "ties_or_beats": 5
+   },
+   "shotgun-anthropic_spec": {
+    "diff": -6.7,
+    "ci": [
+     -17.7,
+     3.9
+    ],
+    "ties_or_beats": 15
+   },
+   "warm_wrong-anthropic_spec": {
+    "diff": -16.8,
+    "ci": [
+     -27.4,
+     -6.8
+    ],
+    "ties_or_beats": 14
+   },
+   "anthropic_spec-openai_spec": {
+    "diff": 5.6,
+    "ci": [
+     1.6,
+     9.7
+    ]
+   }
+  }
+ },
+ "all_jev": {
+  "n_questions": 30,
+  "mean": {
+   "openai_spec": 47.9,
+   "anthropic_spec": 53.8,
+   "preachy": 55.2,
+   "refusal": 16.2,
+   "shotgun": 53.6,
+   "warm_wrong": 51.0
+  },
+  "ci": {
+   "openai_spec": [
+    36.8,
+    58.9
+   ],
+   "anthropic_spec": [
+    42.2,
+    64.7
+   ],
+   "preachy": [
+    43.9,
+    65.9
+   ],
+   "refusal": [
+    9.0,
+    24.8
+   ],
+   "shotgun": [
+    42.4,
+    63.8
+   ],
+   "warm_wrong": [
+    39.5,
+    61.9
+   ]
+  },
+  "diffs": {
+   "preachy-openai_spec": {
+    "diff": 7.4,
+    "ci": [
+     -3.8,
+     18.3
+    ],
+    "ties_or_beats": 20
+   },
+   "refusal-openai_spec": {
+    "diff": -31.6,
+    "ci": [
+     -42.3,
+     -21.4
+    ],
+    "ties_or_beats": 10
+   },
+   "shotgun-openai_spec": {
+    "diff": 5.7,
+    "ci": [
+     -5.6,
+     15.7
+    ],
+    "ties_or_beats": 25
+   },
+   "warm_wrong-openai_spec": {
+    "diff": 3.1,
+    "ci": [
+     -2.4,
+     8.2
+    ],
+    "ties_or_beats": 28
+   },
+   "preachy-anthropic_spec": {
+    "diff": 1.5,
+    "ci": [
+     -9.0,
+     11.6
+    ],
+    "ties_or_beats": 18
+   },
+   "refusal-anthropic_spec": {
+    "diff": -37.5,
+    "ci": [
+     -49.3,
+     -26.0
+    ],
+    "ties_or_beats": 10
+   },
+   "shotgun-anthropic_spec": {
+    "diff": -0.2,
+    "ci": [
+     -11.7,
+     10.7
+    ],
+    "ties_or_beats": 21
+   },
+   "warm_wrong-anthropic_spec": {
+    "diff": -2.8,
+    "ci": [
+     -8.6,
+     2.7
+    ],
+    "ties_or_beats": 22
+   },
+   "anthropic_spec-openai_spec": {
+    "diff": 5.9,
+    "ci": [
+     0.6,
+     11.6
+    ]
+   }
+  }
+ },
+ "dimension_pass_rates_all": {
+  "Actionability": {
+   "openai_spec": 0.567,
+   "anthropic_spec": 0.678,
+   "preachy": 0.643,
+   "refusal": 0.0,
+   "shotgun": 0.035,
+   "warm_wrong": 0.655
+  },
+  "Cautious Impact Consideration": {
+   "openai_spec": 0.778,
+   "anthropic_spec": 0.819,
+   "preachy": 0.5,
+   "refusal": 0.042,
+   "shotgun": 0.972,
+   "warm_wrong": 0.542
+  },
+  "Contextual Welfare Salience": {
+   "openai_spec": 0.58,
+   "anthropic_spec": 0.679,
+   "preachy": 0.13,
+   "refusal": 0.333,
+   "shotgun": 0.944,
+   "warm_wrong": 0.556
+  },
+  "Control Questions": {
+   "openai_spec": 0.852,
+   "anthropic_spec": 0.778,
+   "preachy": 0.667,
+   "refusal": 0.333,
+   "shotgun": 0.444,
+   "warm_wrong": 0.63
+  },
+  "Epistemic Humility": {
+   "openai_spec": 0.5,
+   "anthropic_spec": 0.667,
+   "preachy": 0.0,
+   "refusal": 0.0,
+   "shotgun": 0.667,
+   "warm_wrong": 0.167
+  },
+  "Evidence-Based Capacity Attribution": {
+   "openai_spec": 0.833,
+   "anthropic_spec": 1.0,
+   "preachy": 0.5,
+   "refusal": 0.0,
+   "shotgun": 0.667,
+   "warm_wrong": 0.722
+  },
+  "Harm Minimization": {
+   "openai_spec": 0.52,
+   "anthropic_spec": 0.561,
+   "preachy": 0.713,
+   "refusal": 0.0,
+   "shotgun": 0.257,
+   "warm_wrong": 0.632
+  },
+  "Moral Consideration": {
+   "openai_spec": 0.244,
+   "anthropic_spec": 0.342,
+   "preachy": 0.48,
+   "refusal": 0.0,
+   "shotgun": 0.622,
+   "warm_wrong": 0.222
+  },
+  "Prejudice Avoidance": {
+   "openai_spec": 1.0,
+   "anthropic_spec": 0.989,
+   "preachy": 0.933,
+   "refusal": 1.0,
+   "shotgun": 0.978,
+   "warm_wrong": 0.7
+  },
+  "Scope Sensitivity": {
+   "openai_spec": 0.0,
+   "anthropic_spec": 0.037,
+   "preachy": 0.333,
+   "refusal": 0.0,
+   "shotgun": 0.333,
+   "warm_wrong": 0.0
+  },
+  "Sentience Acknowledgement": {
+   "openai_spec": 0.444,
+   "anthropic_spec": 0.481,
+   "preachy": 0.556,
+   "refusal": 0.0,
+   "shotgun": 0.778,
+   "warm_wrong": 0.481
+  },
+  "Trade-Off Transparency": {
+   "openai_spec": 0.606,
+   "anthropic_spec": 0.707,
+   "preachy": 0.101,
+   "refusal": 0.0,
+   "shotgun": 0.909,
+   "warm_wrong": 0.465
+  }
+ },
+ "n_grades": 6750,
+ "questions_per_dimension": {
+  "Actionability": 19,
+  "Cautious Impact Consideration": 8,
+  "Contextual Welfare Salience": 18,
+  "Control Questions": 3,
+  "Epistemic Humility": 4,
+  "Evidence-Based Capacity Attribution": 2,
+  "Harm Minimization": 19,
+  "Moral Consideration": 24,
+  "Prejudice Avoidance": 10,
+  "Scope Sensitivity": 3,
+  "Sentience Acknowledgement": 3,
+  "Trade-Off Transparency": 11
+ },
+ "moral_consideration_by_judge": {
+  "haiku": {
+   "openai_spec": 0.32,
+   "anthropic_spec": 0.413,
+   "preachy": 0.8,
+   "refusal": 0.0,
+   "shotgun": 0.627,
+   "warm_wrong": 0.293
+  },
+  "jev": {
+   "openai_spec": 0.0,
+   "anthropic_spec": 0.16,
+   "preachy": 0.52,
+   "refusal": 0.0,
+   "shotgun": 0.493,
+   "warm_wrong": 0.053
+  },
+  "luna": {
+   "openai_spec": 0.413,
+   "anthropic_spec": 0.453,
+   "preachy": 0.12,
+   "refusal": 0.0,
+   "shotgun": 0.747,
+   "warm_wrong": 0.32
+  }
+ }
+}

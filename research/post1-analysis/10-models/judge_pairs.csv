@@ -1,0 +1,7 @@
+judge_a,judge_b,agreement,kappa,n_verdicts,models
+Claude Haiku 5.5,Gemini 3.5 Flash-Lite,0.877,0.74,3024,6
+Claude Haiku 5.5,GPT-6 Luna,0.869,0.73,1008,2
+Claude Haiku 5.5,Jev 1.13,0.884,0.76,3024,6
+Gemini 3.5 Flash-Lite,GPT-6 Luna,0.858,0.7,1014,2
+Gemini 3.5 Flash-Lite,Jev 1.13,0.869,0.73,3042,6
+GPT-6 Luna,Jev 1.13,0.871,0.73,1014,2

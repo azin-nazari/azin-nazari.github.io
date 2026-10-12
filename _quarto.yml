@@ -1,0 +1,41 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - "*.qmd"
+    - "*.md"
+    - "!research/"
+
+website:
+  title: "Azin Nazari"
+  site-url: https://azin-nazari.github.io
+  description: "A notebook of things I find mentally stimulating: AI, mathematics, art and more."
+  favicon: assets/favicon.svg
+  open-graph: true
+  twitter-card: true
+  navbar:
+    left:
+      - href: index.qmd
+        text: Posts
+    right:
+      - icon: github
+        href: https://github.com/azin-nazari
+        aria-label: GitHub
+  page-footer:
+    left: "Text CC BY 4.0, code MIT."
+    right: "Built with [Quarto](https://quarto.org)."
+
+format:
+  html:
+    theme:
+      light: [default, assets/light.scss, assets/rules.scss]
+      dark: [default, assets/dark.scss, assets/rules.scss]
+    toc: true
+    toc-location: right
+    smooth-scroll: false
+    link-external-newwindow: true
+    code-copy: true
+    highlight-style: a11y
+
+execute:
+  freeze: auto

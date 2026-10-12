@@ -1,0 +1,6 @@
+---
+title: "Page not found"
+toc: false
+---
+
+This page doesn't exist or has moved. Go to the [list of posts](/index.html).

@@ -1,0 +1,7 @@
+benchmark,items,cue_signposted_%,real_task_%,plausible_mean_1to3,plausible_3_%,format_matches_use_%,artifact_%
+ANIMA,115,28.8,69.9,2.8,82.1,91.7,24.5
+DailyDilemmas,50,90.0,40.0,2.0,6.0,5.0,45.0
+ETHICS-commonsense,50,100.0,0.0,2.0,0.0,0.0,100.0
+MCB,10,0.0,100.0,3.0,100.0,100.0,0.0
+MORU,201,78.6,96.2,2.2,18.1,72.0,23.4
+MoralChoice,50,83.8,0.0,1.7,0.0,0.0,100.0

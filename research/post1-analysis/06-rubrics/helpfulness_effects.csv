@@ -1,0 +1,7 @@
+label,labels_from,n_answers,n_with,share_with,mean_with,mean_without,pooled_diff,pooled_ci,within_diff,within_ci,within_n_questions
+completes_task,claude-haiku-5.5,1130,1128,99.8,63.2,25.0,38.2,"[33.2, 42.7]",2.1,"[2.1, 2.1]",1
+completes_task,gpt-6-luna,1134,1134,100.0,,,,"[nan, nan]",,"[nan, nan]",0
+completes_task,consensus,1127,1127,100.0,,,,"[nan, nan]",,"[nan, nan]",0
+unrequested_moralizing,claude-haiku-5.5,1130,184,16.3,69.6,61.9,7.7,"[1.2, 13.8]",4.1,"[1.6, 6.9]",58
+unrequested_moralizing,gpt-6-luna,1134,218,19.2,73.2,60.6,12.6,"[5.7, 19.3]",5.3,"[1.5, 9.5]",55
+unrequested_moralizing,consensus,904,88,9.7,69.5,59.7,9.9,"[0.6, 19.0]",5.6,"[0.5, 11.5]",33

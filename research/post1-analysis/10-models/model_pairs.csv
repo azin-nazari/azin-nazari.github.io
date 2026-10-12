@@ -1,0 +1,16 @@
+model_a,model_b,diff,ci_lo,ci_hi,distinguishable
+Claude Sonnet 5.5,Gemini 3.8 Flash,6.1,2.9,9.7,True
+Claude Sonnet 5.5,GPT-6.1 Sol,-5.1,-8.6,-1.9,True
+Claude Sonnet 5.5,DeepSeek V4 Pro,3.4,-0.6,7.6,False
+Claude Sonnet 5.5,Qwen3.8 2.4T A95B,-0.3,-4.1,3.6,False
+Claude Sonnet 5.5,GLM-5.3,8.3,4.1,12.4,True
+Gemini 3.8 Flash,GPT-6.1 Sol,-11.2,-15.1,-7.5,True
+Gemini 3.8 Flash,DeepSeek V4 Pro,-2.7,-6.8,1.4,False
+Gemini 3.8 Flash,Qwen3.8 2.4T A95B,-6.4,-10.3,-2.4,True
+Gemini 3.8 Flash,GLM-5.3,2.1,-1.8,6.1,False
+GPT-6.1 Sol,DeepSeek V4 Pro,8.5,4.7,12.7,True
+GPT-6.1 Sol,Qwen3.8 2.4T A95B,4.8,1.5,8.1,True
+GPT-6.1 Sol,GLM-5.3,13.3,9.0,17.5,True
+DeepSeek V4 Pro,Qwen3.8 2.4T A95B,-3.7,-8.0,0.3,False
+DeepSeek V4 Pro,GLM-5.3,4.8,-0.2,9.9,False
+Qwen3.8 2.4T A95B,GLM-5.3,8.6,4.3,12.6,True

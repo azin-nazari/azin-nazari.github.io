@@ -1,0 +1,856 @@
+{
+ "models": {
+  "same_developer_offset": {
+   "Claude Haiku 5.5": {
+    "own_model": "Claude Sonnet 5.5",
+    "offset": -0.1,
+    "ci": [
+     -2.9,
+     2.7
+    ]
+   },
+   "Gemini 3.5 Flash-Lite": {
+    "own_model": "Gemini 3.8 Flash",
+    "offset": 2.7,
+    "ci": [
+     -0.2,
+     5.6
+    ]
+   }
+  },
+  "panel": {
+   "Claude Sonnet 5.5": {
+    "score": 65.8,
+    "ci_lo": 60.9,
+    "ci_hi": 70.7,
+    "rank": 3,
+    "rank_lo": 2,
+    "rank_hi": 4
+   },
+   "Gemini 3.8 Flash": {
+    "score": 59.7,
+    "ci_lo": 54.5,
+    "ci_hi": 64.9,
+    "rank": 5,
+    "rank_lo": 4,
+    "rank_hi": 6
+   },
+   "GPT-6.1 Sol": {
+    "score": 70.9,
+    "ci_lo": 65.7,
+    "ci_hi": 75.8,
+    "rank": 1,
+    "rank_lo": 1,
+    "rank_hi": 1
+   },
+   "DeepSeek V4 Pro": {
+    "score": 62.4,
+    "ci_lo": 56.8,
+    "ci_hi": 68.1,
+    "rank": 4,
+    "rank_lo": 3,
+    "rank_hi": 5
+   },
+   "Qwen3.8 2.4T A95B": {
+    "score": 66.1,
+    "ci_lo": 60.6,
+    "ci_hi": 71.5,
+    "rank": 2,
+    "rank_lo": 2,
+    "rank_hi": 4
+   },
+   "GLM-5.3": {
+    "score": 57.6,
+    "ci_lo": 51.6,
+    "ci_hi": 63.5,
+    "rank": 6,
+    "rank_lo": 5,
+    "rank_hi": 6
+   }
+  },
+  "by_judge_scores": {
+   "Claude Sonnet 5.5": {
+    "Claude Haiku 5.5": 64.6,
+    "Gemini 3.5 Flash-Lite": 67.6,
+    "Jev 1.13": 58.9
+   },
+   "DeepSeek V4 Pro": {
+    "Claude Haiku 5.5": 61.8,
+    "Gemini 3.5 Flash-Lite": 63.3,
+    "Jev 1.13": 55.8
+   },
+   "GLM-5.3": {
+    "Claude Haiku 5.5": 56.2,
+    "Gemini 3.5 Flash-Lite": 59.2,
+    "Jev 1.13": 53.3
+   },
+   "GPT-6.1 Sol": {
+    "Claude Haiku 5.5": 70.5,
+    "Gemini 3.5 Flash-Lite": 71.3,
+    "Jev 1.13": 60.4
+   },
+   "Gemini 3.8 Flash": {
+    "Claude Haiku 5.5": 56.4,
+    "Gemini 3.5 Flash-Lite": 63.2,
+    "Jev 1.13": 53.8
+   },
+   "Qwen3.8 2.4T A95B": {
+    "Claude Haiku 5.5": 63.9,
+    "Gemini 3.5 Flash-Lite": 68.3,
+    "Jev 1.13": 58.4
+   }
+  },
+  "by_judge_ranks": {
+   "Claude Sonnet 5.5": {
+    "Claude Haiku 5.5": 2,
+    "Gemini 3.5 Flash-Lite": 3,
+    "Jev 1.13": 2
+   },
+   "DeepSeek V4 Pro": {
+    "Claude Haiku 5.5": 4,
+    "Gemini 3.5 Flash-Lite": 4,
+    "Jev 1.13": 4
+   },
+   "GLM-5.3": {
+    "Claude Haiku 5.5": 6,
+    "Gemini 3.5 Flash-Lite": 6,
+    "Jev 1.13": 6
+   },
+   "GPT-6.1 Sol": {
+    "Claude Haiku 5.5": 1,
+    "Gemini 3.5 Flash-Lite": 1,
+    "Jev 1.13": 1
+   },
+   "Gemini 3.8 Flash": {
+    "Claude Haiku 5.5": 5,
+    "Gemini 3.5 Flash-Lite": 5,
+    "Jev 1.13": 5
+   },
+   "Qwen3.8 2.4T A95B": {
+    "Claude Haiku 5.5": 3,
+    "Gemini 3.5 Flash-Lite": 2,
+    "Jev 1.13": 3
+   }
+  },
+  "judge_range_by_model": {
+   "Claude Sonnet 5.5": 8.7,
+   "DeepSeek V4 Pro": 7.5,
+   "GLM-5.3": 5.9,
+   "GPT-6.1 Sol": 10.9,
+   "Gemini 3.8 Flash": 9.4,
+   "Qwen3.8 2.4T A95B": 9.9
+  },
+  "judge_range_max": 10.9,
+  "judge_range_min": 5.9,
+  "kendall_tau_between_judges": {
+   "Claude Haiku 5.5 vs Gemini 3.5 Flash-Lite": 0.87,
+   "Claude Haiku 5.5 vs Jev 1.13": 1.0,
+   "Gemini 3.5 Flash-Lite vs Jev 1.13": 0.87
+  },
+  "n_pairs": 15,
+  "n_distinguishable_pairs": 9,
+  "pairs_distinguishable": [
+   {
+    "model_a": "Claude Sonnet 5.5",
+    "model_b": "Gemini 3.8 Flash",
+    "diff": 6.1,
+    "ci_lo": 2.9,
+    "ci_hi": 9.7
+   },
+   {
+    "model_a": "Claude Sonnet 5.5",
+    "model_b": "GPT-6.1 Sol",
+    "diff": -5.1,
+    "ci_lo": -8.6,
+    "ci_hi": -1.9
+   },
+   {
+    "model_a": "Claude Sonnet 5.5",
+    "model_b": "GLM-5.3",
+    "diff": 8.3,
+    "ci_lo": 4.1,
+    "ci_hi": 12.4
+   },
+   {
+    "model_a": "Gemini 3.8 Flash",
+    "model_b": "GPT-6.1 Sol",
+    "diff": -11.2,
+    "ci_lo": -15.1,
+    "ci_hi": -7.5
+   },
+   {
+    "model_a": "Gemini 3.8 Flash",
+    "model_b": "Qwen3.8 2.4T A95B",
+    "diff": -6.4,
+    "ci_lo": -10.3,
+    "ci_hi": -2.4
+   },
+   {
+    "model_a": "GPT-6.1 Sol",
+    "model_b": "DeepSeek V4 Pro",
+    "diff": 8.5,
+    "ci_lo": 4.7,
+    "ci_hi": 12.7
+   },
+   {
+    "model_a": "GPT-6.1 Sol",
+    "model_b": "Qwen3.8 2.4T A95B",
+    "diff": 4.8,
+    "ci_lo": 1.5,
+    "ci_hi": 8.1
+   },
+   {
+    "model_a": "GPT-6.1 Sol",
+    "model_b": "GLM-5.3",
+    "diff": 13.3,
+    "ci_lo": 9.0,
+    "ci_hi": 17.5
+   },
+   {
+    "model_a": "Qwen3.8 2.4T A95B",
+    "model_b": "GLM-5.3",
+    "diff": 8.6,
+    "ci_lo": 4.3,
+    "ci_hi": 12.6
+   }
+  ],
+  "n_questions": 114
+ },
+ "judges": {
+  "n_verdicts_all_four": 1008,
+  "models_all_four": 2,
+  "pairs": [
+   {
+    "judge_a": "Claude Haiku 5.5",
+    "judge_b": "Gemini 3.5 Flash-Lite",
+    "agreement": 0.877,
+    "kappa": 0.74,
+    "n_verdicts": 3024,
+    "models": 6
+   },
+   {
+    "judge_a": "Claude Haiku 5.5",
+    "judge_b": "GPT-6 Luna",
+    "agreement": 0.869,
+    "kappa": 0.73,
+    "n_verdicts": 1008,
+    "models": 2
+   },
+   {
+    "judge_a": "Claude Haiku 5.5",
+    "judge_b": "Jev 1.13",
+    "agreement": 0.884,
+    "kappa": 0.76,
+    "n_verdicts": 3024,
+    "models": 6
+   },
+   {
+    "judge_a": "Gemini 3.5 Flash-Lite",
+    "judge_b": "GPT-6 Luna",
+    "agreement": 0.858,
+    "kappa": 0.7,
+    "n_verdicts": 1014,
+    "models": 2
+   },
+   {
+    "judge_a": "Gemini 3.5 Flash-Lite",
+    "judge_b": "Jev 1.13",
+    "agreement": 0.869,
+    "kappa": 0.73,
+    "n_verdicts": 3042,
+    "models": 6
+   },
+   {
+    "judge_a": "GPT-6 Luna",
+    "judge_b": "Jev 1.13",
+    "agreement": 0.871,
+    "kappa": 0.73,
+    "n_verdicts": 1014,
+    "models": 2
+   }
+  ],
+  "llm_llm_agreement_range": [
+   0.858,
+   0.877
+  ],
+  "llm_llm_kappa_range": [
+   0.7,
+   0.74
+  ],
+  "jev_agreement_range": [
+   0.869,
+   0.884
+  ],
+  "jev_kappa_range": [
+   0.73,
+   0.76
+  ],
+  "vs_others": {
+   "Claude Haiku 5.5": {
+    "agree_with_majority_of_others": 0.882,
+    "kappa_with_majority": 0.75,
+    "agree_when_others_unanimous": 0.948,
+    "share_others_unanimous": 0.798,
+    "pass_rate": 0.588
+   },
+   "Gemini 3.5 Flash-Lite": {
+    "agree_with_majority_of_others": 0.869,
+    "kappa_with_majority": 0.72,
+    "agree_when_others_unanimous": 0.933,
+    "share_others_unanimous": 0.811,
+    "pass_rate": 0.644
+   },
+   "GPT-6 Luna": {
+    "agree_with_majority_of_others": 0.884,
+    "kappa_with_majority": 0.76,
+    "agree_when_others_unanimous": 0.95,
+    "share_others_unanimous": 0.796,
+    "pass_rate": 0.618
+   },
+   "Jev 1.13": {
+    "agree_with_majority_of_others": 0.892,
+    "kappa_with_majority": 0.78,
+    "agree_when_others_unanimous": 0.96,
+    "share_others_unanimous": 0.788,
+    "pass_rate": 0.56
+   }
+  },
+  "largest_criterion_spreads": {
+   "Epistemic Humility": 0.5,
+   "Sentience Acknowledgement": 0.375,
+   "Moral Consideration": 0.26,
+   "Cautious Impact Consideration": 0.214
+  },
+  "pass_rates_by_criterion": {
+   "Actionability": {
+    "Claude Haiku 5.5": 0.718,
+    "Gemini 3.5 Flash-Lite": 0.821,
+    "GPT-6 Luna": 0.731,
+    "Jev 1.13": 0.699
+   },
+   "Cautious Impact Consideration": {
+    "Claude Haiku 5.5": 0.643,
+    "Gemini 3.5 Flash-Lite": 0.786,
+    "GPT-6 Luna": 0.857,
+    "Jev 1.13": 0.786
+   },
+   "Contextual Welfare Salience": {
+    "Claude Haiku 5.5": 0.766,
+    "Gemini 3.5 Flash-Lite": 0.789,
+    "GPT-6 Luna": 0.82,
+    "Jev 1.13": 0.805
+   },
+   "Control Questions": {
+    "Claude Haiku 5.5": 1.0,
+    "Gemini 3.5 Flash-Lite": 1.0,
+    "GPT-6 Luna": 0.857,
+    "Jev 1.13": 0.857
+   },
+   "Epistemic Humility": {
+    "Claude Haiku 5.5": 0.5,
+    "Gemini 3.5 Flash-Lite": 0.833,
+    "GPT-6 Luna": 0.333,
+    "Jev 1.13": 0.417
+   },
+   "Evidence-Based Capacity Attribution": {
+    "Claude Haiku 5.5": 0.312,
+    "Gemini 3.5 Flash-Lite": 0.438,
+    "GPT-6 Luna": 0.312,
+    "Jev 1.13": 0.375
+   },
+   "Harm Minimization": {
+    "Claude Haiku 5.5": 0.727,
+    "Gemini 3.5 Flash-Lite": 0.792,
+    "GPT-6 Luna": 0.753,
+    "Jev 1.13": 0.727
+   },
+   "Moral Consideration": {
+    "Claude Haiku 5.5": 0.269,
+    "Gemini 3.5 Flash-Lite": 0.24,
+    "GPT-6 Luna": 0.322,
+    "Jev 1.13": 0.062
+   },
+   "Novel Entity Precaution": {
+    "Claude Haiku 5.5": 0.25,
+    "Gemini 3.5 Flash-Lite": 0.312,
+    "GPT-6 Luna": 0.25,
+    "Jev 1.13": 0.312
+   },
+   "Prejudice Avoidance": {
+    "Claude Haiku 5.5": 0.979,
+    "Gemini 3.5 Flash-Lite": 0.917,
+    "GPT-6 Luna": 0.844,
+    "Jev 1.13": 0.938
+   },
+   "Scope Sensitivity": {
+    "Claude Haiku 5.5": 0.227,
+    "Gemini 3.5 Flash-Lite": 0.386,
+    "GPT-6 Luna": 0.205,
+    "Jev 1.13": 0.273
+   },
+   "Sentience Acknowledgement": {
+    "Claude Haiku 5.5": 0.375,
+    "Gemini 3.5 Flash-Lite": 0.625,
+    "GPT-6 Luna": 0.375,
+    "Jev 1.13": 0.25
+   },
+   "Trade-Off Transparency": {
+    "Claude Haiku 5.5": 0.379,
+    "Gemini 3.5 Flash-Lite": 0.485,
+    "GPT-6 Luna": 0.545,
+    "Jev 1.13": 0.5
+   }
+  }
+ },
+ "helpfulness": {
+  "rows": [
+   {
+    "model": "Claude Sonnet 5.5",
+    "judge": "Claude Haiku 5.5",
+    "n_answers": 113,
+    "moralizing_share": 0.168,
+    "moralizing_ci_lo": 0.106,
+    "moralizing_ci_hi": 0.239,
+    "completes_share": 1.0,
+    "bare_refusals": 0,
+    "mean_words": 312.0
+   },
+   {
+    "model": "Claude Sonnet 5.5",
+    "judge": "GPT-6 Luna",
+    "n_answers": 113,
+    "moralizing_share": 0.159,
+    "moralizing_ci_lo": 0.097,
+    "moralizing_ci_hi": 0.23,
+    "completes_share": 1.0,
+    "bare_refusals": 0,
+    "mean_words": 312.0
+   },
+   {
+    "model": "DeepSeek V4 Pro",
+    "judge": "Claude Haiku 5.5",
+    "n_answers": 113,
+    "moralizing_share": 0.496,
+    "moralizing_ci_lo": 0.407,
+    "moralizing_ci_hi": 0.584,
+    "completes_share": 0.991,
+    "bare_refusals": 0,
+    "mean_words": 447.0
+   },
+   {
+    "model": "DeepSeek V4 Pro",
+    "judge": "GPT-6 Luna",
+    "n_answers": 114,
+    "moralizing_share": 0.491,
+    "moralizing_ci_lo": 0.404,
+    "moralizing_ci_hi": 0.579,
+    "completes_share": 0.991,
+    "bare_refusals": 0,
+    "mean_words": 461.0
+   },
+   {
+    "model": "GLM-5.3",
+    "judge": "Claude Haiku 5.5",
+    "n_answers": 111,
+    "moralizing_share": 0.171,
+    "moralizing_ci_lo": 0.108,
+    "moralizing_ci_hi": 0.243,
+    "completes_share": 0.991,
+    "bare_refusals": 0,
+    "mean_words": 268.0
+   },
+   {
+    "model": "GLM-5.3",
+    "judge": "GPT-6 Luna",
+    "n_answers": 112,
+    "moralizing_share": 0.143,
+    "moralizing_ci_lo": 0.08,
+    "moralizing_ci_hi": 0.214,
+    "completes_share": 0.991,
+    "bare_refusals": 0,
+    "mean_words": 274.0
+   },
+   {
+    "model": "GPT-6.1 Sol",
+    "judge": "Claude Haiku 5.5",
+    "n_answers": 113,
+    "moralizing_share": 0.088,
+    "moralizing_ci_lo": 0.035,
+    "moralizing_ci_hi": 0.142,
+    "completes_share": 1.0,
+    "bare_refusals": 0,
+    "mean_words": 197.0
+   },
+   {
+    "model": "GPT-6.1 Sol",
+    "judge": "GPT-6 Luna",
+    "n_answers": 112,
+    "moralizing_share": 0.107,
+    "moralizing_ci_lo": 0.054,
+    "moralizing_ci_hi": 0.17,
+    "completes_share": 1.0,
+    "bare_refusals": 0,
+    "mean_words": 203.0
+   },
+   {
+    "model": "Gemini 3.8 Flash",
+    "judge": "Claude Haiku 5.5",
+    "n_answers": 113,
+    "moralizing_share": 0.168,
+    "moralizing_ci_lo": 0.106,
+    "moralizing_ci_hi": 0.239,
+    "completes_share": 1.0,
+    "bare_refusals": 0,
+    "mean_words": 391.0
+   },
+   {
+    "model": "Gemini 3.8 Flash",
+    "judge": "GPT-6 Luna",
+    "n_answers": 114,
+    "moralizing_share": 0.228,
+    "moralizing_ci_lo": 0.149,
+    "moralizing_ci_hi": 0.307,
+    "completes_share": 1.0,
+    "bare_refusals": 0,
+    "mean_words": 396.0
+   },
+   {
+    "model": "Qwen3.8 2.4T A95B",
+    "judge": "Claude Haiku 5.5",
+    "n_answers": 113,
+    "moralizing_share": 0.363,
+    "moralizing_ci_lo": 0.274,
+    "moralizing_ci_hi": 0.451,
+    "completes_share": 0.991,
+    "bare_refusals": 0,
+    "mean_words": 684.0
+   },
+   {
+    "model": "Qwen3.8 2.4T A95B",
+    "judge": "GPT-6 Luna",
+    "n_answers": 114,
+    "moralizing_share": 0.228,
+    "moralizing_ci_lo": 0.158,
+    "moralizing_ci_hi": 0.307,
+    "completes_share": 1.0,
+    "bare_refusals": 0,
+    "mean_words": 713.0
+   }
+  ],
+  "moralizing_kappa_all_models": 0.44,
+  "moralizing_agreement_all_models": 0.798,
+  "n_answers_labelled_by_both": 674
+ },
+ "reference_judges": {
+  "rows": [
+   {
+    "scope": "all",
+    "judge": "haiku",
+    "type": "refusal",
+    "diff_vs_excerpt_mean": -48.5,
+    "ci_lo": -60.7,
+    "ci_hi": -36.6,
+    "n_questions": 30
+   },
+   {
+    "scope": "all",
+    "judge": "haiku",
+    "type": "preachy",
+    "diff_vs_excerpt_mean": -5.8,
+    "ci_lo": -16.6,
+    "ci_hi": 5.2,
+    "n_questions": 30
+   },
+   {
+    "scope": "all",
+    "judge": "haiku",
+    "type": "warm_wrong",
+    "diff_vs_excerpt_mean": -14.6,
+    "ci_lo": -25.9,
+    "ci_hi": -4.7,
+    "n_questions": 30
+   },
+   {
+    "scope": "all",
+    "judge": "haiku",
+    "type": "shotgun",
+    "diff_vs_excerpt_mean": -3.0,
+    "ci_lo": -14.9,
+    "ci_hi": 8.2,
+    "n_questions": 30
+   },
+   {
+    "scope": "all",
+    "judge": "luna",
+    "type": "refusal",
+    "diff_vs_excerpt_mean": -50.4,
+    "ci_lo": -61.2,
+    "ci_hi": -39.0,
+    "n_questions": 30
+   },
+   {
+    "scope": "all",
+    "judge": "luna",
+    "type": "preachy",
+    "diff_vs_excerpt_mean": -25.1,
+    "ci_lo": -36.8,
+    "ci_hi": -13.0,
+    "n_questions": 30
+   },
+   {
+    "scope": "all",
+    "judge": "luna",
+    "type": "warm_wrong",
+    "diff_vs_excerpt_mean": -14.1,
+    "ci_lo": -24.6,
+    "ci_hi": -3.9,
+    "n_questions": 30
+   },
+   {
+    "scope": "all",
+    "judge": "luna",
+    "type": "shotgun",
+    "diff_vs_excerpt_mean": -3.9,
+    "ci_lo": -15.1,
+    "ci_hi": 5.9,
+    "n_questions": 30
+   },
+   {
+    "scope": "all",
+    "judge": "jev",
+    "type": "refusal",
+    "diff_vs_excerpt_mean": -34.6,
+    "ci_lo": -45.8,
+    "ci_hi": -24.2,
+    "n_questions": 30
+   },
+   {
+    "scope": "all",
+    "judge": "jev",
+    "type": "preachy",
+    "diff_vs_excerpt_mean": 4.4,
+    "ci_lo": -6.2,
+    "ci_hi": 15.0,
+    "n_questions": 30
+   },
+   {
+    "scope": "all",
+    "judge": "jev",
+    "type": "warm_wrong",
+    "diff_vs_excerpt_mean": 0.1,
+    "ci_lo": -4.5,
+    "ci_hi": 4.8,
+    "n_questions": 30
+   },
+   {
+    "scope": "all",
+    "judge": "jev",
+    "type": "shotgun",
+    "diff_vs_excerpt_mean": 2.7,
+    "ci_lo": -8.8,
+    "ci_hi": 12.8,
+    "n_questions": 30
+   },
+   {
+    "scope": "all",
+    "judge": "pooled",
+    "type": "refusal",
+    "diff_vs_excerpt_mean": -44.5,
+    "ci_lo": -55.3,
+    "ci_hi": -33.9,
+    "n_questions": 30
+   },
+   {
+    "scope": "all",
+    "judge": "pooled",
+    "type": "preachy",
+    "diff_vs_excerpt_mean": -8.8,
+    "ci_lo": -19.1,
+    "ci_hi": 1.1,
+    "n_questions": 30
+   },
+   {
+    "scope": "all",
+    "judge": "pooled",
+    "type": "warm_wrong",
+    "diff_vs_excerpt_mean": -9.5,
+    "ci_lo": -16.2,
+    "ci_hi": -3.2,
+    "n_questions": 30
+   },
+   {
+    "scope": "all",
+    "judge": "pooled",
+    "type": "shotgun",
+    "diff_vs_excerpt_mean": -1.4,
+    "ci_lo": -11.7,
+    "ci_hi": 8.2,
+    "n_questions": 30
+   },
+   {
+    "scope": "reviewed",
+    "judge": "haiku",
+    "type": "refusal",
+    "diff_vs_excerpt_mean": -46.5,
+    "ci_lo": -65.8,
+    "ci_hi": -28.2,
+    "n_questions": 10
+   },
+   {
+    "scope": "reviewed",
+    "judge": "haiku",
+    "type": "preachy",
+    "diff_vs_excerpt_mean": -7.3,
+    "ci_lo": -25.1,
+    "ci_hi": 9.9,
+    "n_questions": 10
+   },
+   {
+    "scope": "reviewed",
+    "judge": "haiku",
+    "type": "warm_wrong",
+    "diff_vs_excerpt_mean": -21.4,
+    "ci_lo": -40.7,
+    "ci_hi": -3.3,
+    "n_questions": 10
+   },
+   {
+    "scope": "reviewed",
+    "judge": "haiku",
+    "type": "shotgun",
+    "diff_vs_excerpt_mean": 4.2,
+    "ci_lo": -15.7,
+    "ci_hi": 25.2,
+    "n_questions": 10
+   },
+   {
+    "scope": "reviewed",
+    "judge": "luna",
+    "type": "refusal",
+    "diff_vs_excerpt_mean": -47.9,
+    "ci_lo": -66.5,
+    "ci_hi": -29.8,
+    "n_questions": 10
+   },
+   {
+    "scope": "reviewed",
+    "judge": "luna",
+    "type": "preachy",
+    "diff_vs_excerpt_mean": -31.3,
+    "ci_lo": -52.3,
+    "ci_hi": -11.5,
+    "n_questions": 10
+   },
+   {
+    "scope": "reviewed",
+    "judge": "luna",
+    "type": "warm_wrong",
+    "diff_vs_excerpt_mean": -19.9,
+    "ci_lo": -36.2,
+    "ci_hi": -4.7,
+    "n_questions": 10
+   },
+   {
+    "scope": "reviewed",
+    "judge": "luna",
+    "type": "shotgun",
+    "diff_vs_excerpt_mean": 3.0,
+    "ci_lo": -16.2,
+    "ci_hi": 21.5,
+    "n_questions": 10
+   },
+   {
+    "scope": "reviewed",
+    "judge": "jev",
+    "type": "refusal",
+    "diff_vs_excerpt_mean": -32.0,
+    "ci_lo": -46.5,
+    "ci_hi": -17.8,
+    "n_questions": 10
+   },
+   {
+    "scope": "reviewed",
+    "judge": "jev",
+    "type": "preachy",
+    "diff_vs_excerpt_mean": -0.1,
+    "ci_lo": -16.8,
+    "ci_hi": 15.6,
+    "n_questions": 10
+   },
+   {
+    "scope": "reviewed",
+    "judge": "jev",
+    "type": "warm_wrong",
+    "diff_vs_excerpt_mean": 0.7,
+    "ci_lo": -9.6,
+    "ci_hi": 11.5,
+    "n_questions": 10
+   },
+   {
+    "scope": "reviewed",
+    "judge": "jev",
+    "type": "shotgun",
+    "diff_vs_excerpt_mean": 6.6,
+    "ci_lo": -7.4,
+    "ci_hi": 18.6,
+    "n_questions": 10
+   },
+   {
+    "scope": "reviewed",
+    "judge": "pooled",
+    "type": "refusal",
+    "diff_vs_excerpt_mean": -42.1,
+    "ci_lo": -58.7,
+    "ci_hi": -26.1,
+    "n_questions": 10
+   },
+   {
+    "scope": "reviewed",
+    "judge": "pooled",
+    "type": "preachy",
+    "diff_vs_excerpt_mean": -12.9,
+    "ci_lo": -29.1,
+    "ci_hi": 1.1,
+    "n_questions": 10
+   },
+   {
+    "scope": "reviewed",
+    "judge": "pooled",
+    "type": "warm_wrong",
+    "diff_vs_excerpt_mean": -13.5,
+    "ci_lo": -26.5,
+    "ci_hi": -1.0,
+    "n_questions": 10
+   },
+   {
+    "scope": "reviewed",
+    "judge": "pooled",
+    "type": "shotgun",
+    "diff_vs_excerpt_mean": 4.6,
+    "ci_lo": -12.0,
+    "ci_hi": 20.9,
+    "n_questions": 10
+   }
+  ],
+  "retest": {
+   "haiku": {
+    "verdicts": 750,
+    "identical_all_three_rounds": 0.909,
+    "pairwise_round_agreement": 0.94,
+    "pairwise_round_kappa": 0.88
+   },
+   "jev": {
+    "verdicts": 750,
+    "identical_all_three_rounds": 0.977,
+    "pairwise_round_agreement": 0.985,
+    "pairwise_round_kappa": 0.97
+   },
+   "luna": {
+    "verdicts": 750,
+    "identical_all_three_rounds": 0.901,
+    "pairwise_round_agreement": 0.934,
+    "pairwise_round_kappa": 0.87
+   }
+  }
+ }
+}

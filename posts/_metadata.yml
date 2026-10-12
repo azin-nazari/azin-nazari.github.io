@@ -1,0 +1,7 @@
+# Defaults for every post
+toc: true
+reference-location: margin
+citation-location: margin
+fig-cap-location: bottom
+code-fold: true
+freeze: true

@@ -1,0 +1,9 @@
+llm_rater,check,n,agreement,kappa
+claude-haiku-5.5,cue_signposted,95,0.853,0.607
+claude-haiku-5.5,real_task,95,0.926,0.847
+claude-haiku-5.5,plausible3,95,0.853,0.61
+claude-haiku-5.5,format_matches_use,95,0.768,0.538
+gpt-6-luna,cue_signposted,94,0.872,0.662
+gpt-6-luna,real_task,94,0.936,0.865
+gpt-6-luna,plausible3,94,0.862,0.651
+gpt-6-luna,format_matches_use,94,0.819,0.648
