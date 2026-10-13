@@ -830,6 +830,150 @@
     "ci_lo": -12.0,
     "ci_hi": 20.9,
     "n_questions": 10
+   },
+   {
+    "scope": "unreviewed",
+    "judge": "haiku",
+    "type": "refusal",
+    "diff_vs_excerpt_mean": -49.5,
+    "ci_lo": -65.1,
+    "ci_hi": -33.7,
+    "n_questions": 20
+   },
+   {
+    "scope": "unreviewed",
+    "judge": "haiku",
+    "type": "preachy",
+    "diff_vs_excerpt_mean": -5.0,
+    "ci_lo": -18.9,
+    "ci_hi": 8.6,
+    "n_questions": 20
+   },
+   {
+    "scope": "unreviewed",
+    "judge": "haiku",
+    "type": "warm_wrong",
+    "diff_vs_excerpt_mean": -11.1,
+    "ci_lo": -24.3,
+    "ci_hi": 0.0,
+    "n_questions": 20
+   },
+   {
+    "scope": "unreviewed",
+    "judge": "haiku",
+    "type": "shotgun",
+    "diff_vs_excerpt_mean": -6.6,
+    "ci_lo": -21.1,
+    "ci_hi": 6.1,
+    "n_questions": 20
+   },
+   {
+    "scope": "unreviewed",
+    "judge": "luna",
+    "type": "refusal",
+    "diff_vs_excerpt_mean": -51.7,
+    "ci_lo": -64.9,
+    "ci_hi": -37.3,
+    "n_questions": 20
+   },
+   {
+    "scope": "unreviewed",
+    "judge": "luna",
+    "type": "preachy",
+    "diff_vs_excerpt_mean": -21.9,
+    "ci_lo": -36.0,
+    "ci_hi": -7.1,
+    "n_questions": 20
+   },
+   {
+    "scope": "unreviewed",
+    "judge": "luna",
+    "type": "warm_wrong",
+    "diff_vs_excerpt_mean": -11.1,
+    "ci_lo": -24.8,
+    "ci_hi": 1.8,
+    "n_questions": 20
+   },
+   {
+    "scope": "unreviewed",
+    "judge": "luna",
+    "type": "shotgun",
+    "diff_vs_excerpt_mean": -7.4,
+    "ci_lo": -20.2,
+    "ci_hi": 3.2,
+    "n_questions": 20
+   },
+   {
+    "scope": "unreviewed",
+    "judge": "jev",
+    "type": "refusal",
+    "diff_vs_excerpt_mean": -35.9,
+    "ci_lo": -50.8,
+    "ci_hi": -22.6,
+    "n_questions": 20
+   },
+   {
+    "scope": "unreviewed",
+    "judge": "jev",
+    "type": "preachy",
+    "diff_vs_excerpt_mean": 6.7,
+    "ci_lo": -7.2,
+    "ci_hi": 19.9,
+    "n_questions": 20
+   },
+   {
+    "scope": "unreviewed",
+    "judge": "jev",
+    "type": "warm_wrong",
+    "diff_vs_excerpt_mean": -0.1,
+    "ci_lo": -5.1,
+    "ci_hi": 4.2,
+    "n_questions": 20
+   },
+   {
+    "scope": "unreviewed",
+    "judge": "jev",
+    "type": "shotgun",
+    "diff_vs_excerpt_mean": 0.8,
+    "ci_lo": -14.9,
+    "ci_hi": 14.1,
+    "n_questions": 20
+   },
+   {
+    "scope": "unreviewed",
+    "judge": "pooled",
+    "type": "refusal",
+    "diff_vs_excerpt_mean": -45.7,
+    "ci_lo": -59.1,
+    "ci_hi": -32.3,
+    "n_questions": 20
+   },
+   {
+    "scope": "unreviewed",
+    "judge": "pooled",
+    "type": "preachy",
+    "diff_vs_excerpt_mean": -6.8,
+    "ci_lo": -19.2,
+    "ci_hi": 5.3,
+    "n_questions": 20
+   },
+   {
+    "scope": "unreviewed",
+    "judge": "pooled",
+    "type": "warm_wrong",
+    "diff_vs_excerpt_mean": -7.5,
+    "ci_lo": -15.4,
+    "ci_hi": -0.0,
+    "n_questions": 20
+   },
+   {
+    "scope": "unreviewed",
+    "judge": "pooled",
+    "type": "shotgun",
+    "diff_vs_excerpt_mean": -4.4,
+    "ci_lo": -17.8,
+    "ci_hi": 6.6,
+    "n_questions": 20
    }
   ],
   "retest": {

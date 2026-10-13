@@ -137,7 +137,7 @@ L 446.53257 70.56
      </g>
     </g>
     <g id="text_10">
-     <text style="font-size: 10px; font-family: 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #52514e" x="284.466285" y="335.562437" transform="rotate(-0 284.466285 335.562437)">ANIMA score (0-100), two-judge panel</text>
+     <text style="font-size: 10px; font-family: 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #52514e" x="284.466285" y="335.562437" transform="rotate(-0 284.466285 335.562437)">ANIMA score (0-100), panel of two judges</text>
     </g>
    </g>
    <g id="matplotlib.axis_2">
@@ -524,7 +524,7 @@ z
     <text style="font-size: 9px; font-family: 'DejaVu Sans', sans-serif; text-anchor: start; fill: #eb6834" x="541.931588" y="101.608065" transform="rotate(-0 541.931588 101.608065)">GPT-6 Luna labels</text>
    </g>
    <g id="text_34">
-    <text style="font-size: 11px; font-family: 'DejaVu Sans', sans-serif; text-anchor: start; fill: #0b0b0b" x="469.1018" y="64.56" transform="rotate(-0 469.1018 64.56)">Flagged for excessive moral commentary</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans', sans-serif; text-anchor: start; fill: #0b0b0b" x="469.1018" y="64.56" transform="rotate(-0 469.1018 64.56)">Answers flagged for moralizing</text>
    </g>
   </g>
   <g id="text_35">

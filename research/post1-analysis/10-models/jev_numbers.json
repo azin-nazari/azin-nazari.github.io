@@ -1,0 +1,10 @@
+{
+ "verdicts_all_three": 3024,
+ "panel_agrees": 2653,
+ "panel_agrees_pct": 87.7,
+ "jev_agrees_with_agreeing_panel_pct": 92.9,
+ "jev_disagreements": 188,
+ "jev_stricter": 159,
+ "jev_looser": 29,
+ "moral_consideration_share_of_disagreements_pct": 50.5
+}

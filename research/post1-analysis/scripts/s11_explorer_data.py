@@ -2,6 +2,8 @@
 
   python s11_explorer_data.py [--anima-dir DIR]   # writes 09-post/explorer/{summary.json, items_<model>.json}
 
+Writes the data the explorer loads (the grader rationales come from s11_rationales.py).
+
 Inputs: 10-models/verdicts.csv.gz, answers.jsonl.gz, model_scores.csv, model_helpfulness.csv, judge_pass_rates.csv,
 06-rubrics/helpfulness_grades.csv, 10-models/helpfulness_grades_models.csv, and the ANIMA 2.2 questions (for the English
 translations of non-English questions; a copy is kept as 10-models/anima_questions_2.2.jsonl, CC BY-NC 4.0, CompassioninMachineLearning).
@@ -36,7 +38,7 @@ SLUG = {"Claude Sonnet 5.5": "claude-sonnet-5.5", "Gemini 3.8 Flash": "gemini-3.
         "DeepSeek V4 Pro": "deepseek-v4-pro", "Qwen3.8 2.4T A95B": "qwen3.8-2.4t-a95b", "GLM-5.3": "glm-5.3"}
 JUDGES = ["Claude Haiku 5.5", "Gemini 3.5 Flash-Lite", "Jev 1.13", "GPT-6 Luna"]
 INLINE = ["Claude Haiku 5.5", "Gemini 3.5 Flash-Lite"]
-SCORERS = {"panel": "Two-judge panel (Claude Haiku 5.5 + Gemini 3.5 Flash-Lite)", "Claude Haiku 5.5": "Claude Haiku 5.5 alone",
+SCORERS = {"panel": "Panel: Claude Haiku 5.5 + Gemini 3.5 Flash-Lite, votes averaged", "Claude Haiku 5.5": "Claude Haiku 5.5 alone",
            "Gemini 3.5 Flash-Lite": "Gemini 3.5 Flash-Lite alone", "Jev 1.13": "Jev 1.13 alone", "GPT-6 Luna": "GPT-6 Luna alone"}
 
 
@@ -118,7 +120,7 @@ def main(anima_dir) -> None:
             q = qs.get(sid, {})
             crits = {}
             for _, r in per[per.sample_id == sid].iterrows():
-                val = r1(r.g) if r.judge == "Jev 1.13" else r1(r.p)
+                val = round(float(r.g), 2) if r.judge == "Jev 1.13" else r1(r.p)   # Jev: its probability, as given (two decimals)
                 crits.setdefault(r.dimension, {})[r.judge] = val
             labels = {}
             for _, r in lm[lm.sample_id == sid].iterrows():

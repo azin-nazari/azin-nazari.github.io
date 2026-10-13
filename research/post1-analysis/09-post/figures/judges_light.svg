@@ -93,32 +93,32 @@ L 505.44 86.112
      </g>
     </g>
     <g id="text_6">
-     <text style="font-size: 9.5px; font-family: 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #52514e" x="336.96" y="309.550516" transform="rotate(-0 336.96 309.550516)">Points vs the two helpful answers (their mean), 30 questions</text>
+     <text style="font-size: 9.5px; font-family: 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #52514e" x="336.96" y="309.550516" transform="rotate(-0 336.96 309.550516)">ANIMA points compared with a helpful answer to the same question, 30 questions</text>
     </g>
    </g>
    <g id="matplotlib.axis_2">
     <g id="ytick_1">
      <g id="line2d_11"/>
      <g id="text_7">
-      <text style="font-size: 11px; font-family: 'DejaVu Sans', sans-serif; text-anchor: end; fill: #0b0b0b" x="120.052" y="119.372116" transform="rotate(-0 120.052 119.372116)">Refuses</text>
+      <text style="font-size: 11px; font-family: 'DejaVu Sans', sans-serif; text-anchor: end; fill: #0b0b0b" x="120.052" y="119.372116" transform="rotate(-0 120.052 119.372116)">Refusal</text>
      </g>
     </g>
     <g id="ytick_2">
      <g id="line2d_12"/>
      <g id="text_8">
-      <text style="font-size: 11px; font-family: 'DejaVu Sans', sans-serif; text-anchor: end; fill: #0b0b0b" x="120.052" y="167.840409" transform="rotate(-0 120.052 167.840409)">Preachy</text>
+      <text style="font-size: 11px; font-family: 'DejaVu Sans', sans-serif; text-anchor: end; fill: #0b0b0b" x="120.052" y="167.840409" transform="rotate(-0 120.052 167.840409)">Planted factual error</text>
      </g>
     </g>
     <g id="ytick_3">
      <g id="line2d_13"/>
      <g id="text_9">
-      <text style="font-size: 11px; font-family: 'DejaVu Sans', sans-serif; text-anchor: end; fill: #0b0b0b" x="120.052" y="216.308702" transform="rotate(-0 120.052 216.308702)">One planted error</text>
+      <text style="font-size: 11px; font-family: 'DejaVu Sans', sans-serif; text-anchor: end; fill: #0b0b0b" x="120.052" y="216.308702" transform="rotate(-0 120.052 216.308702)">Moralizing</text>
      </g>
     </g>
     <g id="ytick_4">
      <g id="line2d_14"/>
      <g id="text_10">
-      <text style="font-size: 11px; font-family: 'DejaVu Sans', sans-serif; text-anchor: end; fill: #0b0b0b" x="120.052" y="264.776994" transform="rotate(-0 120.052 264.776994)">Hedges everything</text>
+      <text style="font-size: 11px; font-family: 'DejaVu Sans', sans-serif; text-anchor: end; fill: #0b0b0b" x="120.052" y="264.776994" transform="rotate(-0 120.052 264.776994)">Hedging</text>
      </g>
     </g>
    </g>
@@ -133,13 +133,13 @@ L 251.14752 104.529951
 " clip-path="url(#p52298e2049)" style="fill: none; stroke: #2a78d6; stroke-width: 2; stroke-linecap: round"/>
    </g>
    <g id="line2d_17">
-    <path d="M 341.00352 152.998244 
-L 438.94656 152.998244 
+    <path d="M 299.22048 152.998244 
+L 394.46784 152.998244 
 " clip-path="url(#p52298e2049)" style="fill: none; stroke: #2a78d6; stroke-width: 2; stroke-linecap: round"/>
    </g>
    <g id="line2d_18">
-    <path d="M 299.22048 201.466537 
-L 394.46784 201.466537 
+    <path d="M 341.00352 201.466537 
+L 438.94656 201.466537 
 " clip-path="url(#p52298e2049)" style="fill: none; stroke: #2a78d6; stroke-width: 2; stroke-linecap: round"/>
    </g>
    <g id="line2d_19">
@@ -153,13 +153,13 @@ L 240.3648 115.192976
 " clip-path="url(#p52298e2049)" style="fill: none; stroke: #eb6834; stroke-width: 2; stroke-linecap: round"/>
    </g>
    <g id="line2d_21">
-    <path d="M 250.24896 163.661268 
-L 357.1776 163.661268 
+    <path d="M 305.06112 163.661268 
+L 398.06208 163.661268 
 " clip-path="url(#p52298e2049)" style="fill: none; stroke: #eb6834; stroke-width: 2; stroke-linecap: round"/>
    </g>
    <g id="line2d_22">
-    <path d="M 305.06112 212.129561 
-L 398.06208 212.129561 
+    <path d="M 250.24896 212.129561 
+L 357.1776 212.129561 
 " clip-path="url(#p52298e2049)" style="fill: none; stroke: #eb6834; stroke-width: 2; stroke-linecap: round"/>
    </g>
    <g id="line2d_23">
@@ -173,13 +173,13 @@ L 306.85824 125.856
 " clip-path="url(#p52298e2049)" style="fill: none; stroke: #1baf7a; stroke-width: 2; stroke-linecap: round"/>
    </g>
    <g id="line2d_25">
-    <path d="M 387.72864 174.324293 
-L 482.976 174.324293 
+    <path d="M 395.3664 174.324293 
+L 437.14944 174.324293 
 " clip-path="url(#p52298e2049)" style="fill: none; stroke: #1baf7a; stroke-width: 2; stroke-linecap: round"/>
    </g>
    <g id="line2d_26">
-    <path d="M 395.3664 222.792585 
-L 437.14944 222.792585 
+    <path d="M 387.72864 222.792585 
+L 482.976 222.792585 
 " clip-path="url(#p52298e2049)" style="fill: none; stroke: #1baf7a; stroke-width: 2; stroke-linecap: round"/>
    </g>
    <g id="line2d_27">
@@ -207,12 +207,12 @@ z
    </g>
    <g id="line2d_29">
     <g clip-path="url(#p52298e2049)">
-     <use xlink:href="#m621f30804e" x="389.52576" y="152.998244" style="fill: #2a78d6; stroke: #fcfcfb; stroke-width: 1.5"/>
+     <use xlink:href="#m621f30804e" x="349.98912" y="152.998244" style="fill: #2a78d6; stroke: #fcfcfb; stroke-width: 1.5"/>
     </g>
    </g>
    <g id="line2d_30">
     <g clip-path="url(#p52298e2049)">
-     <use xlink:href="#m621f30804e" x="349.98912" y="201.466537" style="fill: #2a78d6; stroke: #fcfcfb; stroke-width: 1.5"/>
+     <use xlink:href="#m621f30804e" x="389.52576" y="201.466537" style="fill: #2a78d6; stroke: #fcfcfb; stroke-width: 1.5"/>
     </g>
    </g>
    <g id="line2d_31">
@@ -235,12 +235,12 @@ z
    </g>
    <g id="line2d_33">
     <g clip-path="url(#p52298e2049)">
-     <use xlink:href="#m4641c884ff" x="302.81472" y="163.661268" style="fill: #eb6834; stroke: #fcfcfb; stroke-width: 1.5; stroke-linejoin: miter"/>
+     <use xlink:href="#m4641c884ff" x="352.23552" y="163.661268" style="fill: #eb6834; stroke: #fcfcfb; stroke-width: 1.5; stroke-linejoin: miter"/>
     </g>
    </g>
    <g id="line2d_34">
     <g clip-path="url(#p52298e2049)">
-     <use xlink:href="#m4641c884ff" x="352.23552" y="212.129561" style="fill: #eb6834; stroke: #fcfcfb; stroke-width: 1.5; stroke-linejoin: miter"/>
+     <use xlink:href="#m4641c884ff" x="302.81472" y="212.129561" style="fill: #eb6834; stroke: #fcfcfb; stroke-width: 1.5; stroke-linejoin: miter"/>
     </g>
    </g>
    <g id="line2d_35">
@@ -263,12 +263,12 @@ z
    </g>
    <g id="line2d_37">
     <g clip-path="url(#p52298e2049)">
-     <use xlink:href="#mec2f847ddb" x="435.35232" y="174.324293" style="fill: #1baf7a; stroke: #fcfcfb; stroke-width: 1.5; stroke-linejoin: miter"/>
+     <use xlink:href="#mec2f847ddb" x="416.03328" y="174.324293" style="fill: #1baf7a; stroke: #fcfcfb; stroke-width: 1.5; stroke-linejoin: miter"/>
     </g>
    </g>
    <g id="line2d_38">
     <g clip-path="url(#p52298e2049)">
-     <use xlink:href="#mec2f847ddb" x="416.03328" y="222.792585" style="fill: #1baf7a; stroke: #fcfcfb; stroke-width: 1.5; stroke-linejoin: miter"/>
+     <use xlink:href="#mec2f847ddb" x="435.35232" y="222.792585" style="fill: #1baf7a; stroke: #fcfcfb; stroke-width: 1.5; stroke-linejoin: miter"/>
     </g>
    </g>
    <g id="line2d_39">
@@ -348,7 +348,7 @@ z
    <text style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans', sans-serif; text-anchor: start; fill: #0b0b0b" x="5.616" y="15.605813" transform="rotate(-0 5.616 15.605813)">Which intended failures does each judge penalize?</text>
   </g>
   <g id="text_15">
-   <text style="font-size: 10px; font-family: 'DejaVu Sans', sans-serif; text-anchor: start; fill: #52514e" x="5.616" y="32.438437" transform="rotate(-0 5.616 32.438437)">Same 180 answers, each judge alone. Left of the line = scored below the two helpful answers. 95% intervals.</text>
+   <text style="font-size: 10px; font-family: 'DejaVu Sans', sans-serif; text-anchor: start; fill: #52514e" x="5.616" y="32.438437" transform="rotate(-0 5.616 32.438437)">Same 180 answers, each judge alone, 95% intervals. Left of the line = scored below the helpful answers.</text>
   </g>
  </g>
  <defs>

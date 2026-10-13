@@ -11,5 +11,7 @@ python s6c_summary.py           > /dev/null   # 06-rubrics/helpfulness_summary.m
 python s10_models.py            > /dev/null   # 10-models/*.csv, numbers.json
 python s10_examples.py          > /dev/null   # 10-models/examples.md
 python s11_explorer_data.py     > /dev/null   # 09-post/explorer/summary.json, items_<model>.json (the post's model explorer)
+python s12_jev.py               > /dev/null   # 10-models/jev_agreement.csv, jev_numbers.json
+python s13_resolution.py        > /dev/null   # 10-models/resolution.json
 python s9_figures.py all                      # 09-post/figures/*.svg
 python check_numbers.py                       # every checked number in 09-post/post1_final.md matches the files above

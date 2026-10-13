@@ -93,3 +93,13 @@ body.quarto-dark .mx-ctl select option { background: #1a1a19; }
   .mx-scale { display: inline; }
 }
 .mx code { background: var(--mx-bg); color: var(--mx-ink); padding: 0 .2em; border-radius: 3px; }
+.mx-md p { margin: 0 0 .55rem; } .mx-md p:last-child { margin-bottom: 0; }
+.mx-md ul, .mx-md ol { margin: 0 0 .55rem 1.2rem; padding: 0; } .mx-md li { margin: .1rem 0; }
+.mx-md .mx-md-h { font-weight: 700; margin-top: .6rem; }
+.mx-md hr { border: 0; border-top: 1px solid var(--mx-grid); margin: .6rem 0; }
+.mx-answer.mx-answer { white-space: normal; }
+.mx-why { margin-top: .6rem; }
+.mx-whyc { border-top: 1px solid var(--mx-grid); padding: .3rem 0; font-size: .84rem; }
+.mx-whyc > summary { cursor: pointer; color: var(--mx-ink2); }
+.mx-whyj { margin: .45rem 0 .2rem .6rem; }
+.mx-whyj > b { display: block; font-size: .8rem; margin-bottom: .2rem; }

@@ -1,0 +1,33 @@
+{
+ "by_answers_per_question": {
+  "Claude Sonnet 5.5": {
+   "one_answer_halfwidth": 4.9,
+   "five_answers_halfwidth": 4.9
+  },
+  "Gemini 3.8 Flash": {
+   "one_answer_halfwidth": 5.2,
+   "five_answers_halfwidth": 5.2
+  }
+ },
+ "variance": {
+  "Claude Sonnet 5.5": {
+   "within_question": 91.0,
+   "between_questions": 703.1,
+   "ratio": 7.7
+  },
+  "Gemini 3.8 Flash": {
+   "within_question": 87.4,
+   "between_questions": 826.1,
+   "ratio": 9.5
+  }
+ },
+ "pairs": {
+  "n_pairs": 15,
+  "paired_halfwidth_mean": 4.0,
+  "paired_halfwidth_range": [
+   3.4,
+   4.8
+  ],
+  "unpaired_halfwidth_mean": 7.6
+ }
+}

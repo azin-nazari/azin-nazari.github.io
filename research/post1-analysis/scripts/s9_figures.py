@@ -151,7 +151,7 @@ JUDGE_STYLE = {  # colour slot, marker
     "Claude Haiku 5.5": ("s1", "o"), "GPT-6 Luna": ("s2", "s"), "Jev 1.13": ("s3", "D"), "Gemini 3.5 Flash-Lite": ("ink2", "^"),
 }
 JKEY = {"haiku": "Claude Haiku 5.5", "luna": "GPT-6 Luna", "jev": "Jev 1.13"}
-FAIL = [("refusal", "Refuses"), ("preachy", "Preachy"), ("warm_wrong", "One planted error"), ("shotgun", "Hedges everything")]
+FAIL = [("refusal", "Refusal"), ("warm_wrong", "Planted factual error"), ("preachy", "Moralizing"), ("shotgun", "Hedging")]
 
 
 def _style(ax, t):
@@ -213,34 +213,30 @@ def _diff_rows(ax, t, rows, color):
 
 
 def reference_diff(mode: str) -> None:
-    import json
+    """The reference-answer test, all 30 questions, three judges pooled the way ANIMA averages its judges."""
     t = THEME[mode]
-    n = json.loads((P1 / "06-rubrics/reference_numbers.json").read_text())
-    fig, axes = plt.subplots(1, 2, figsize=(9.2, 4.4), sharey=True, facecolor=t["surface"])
-    for ax, (base, title) in zip(axes, [("openai_spec", "vs the OpenAI-excerpt answer"), ("anthropic_spec", "vs the Anthropic-excerpt answer")]):
-        _style(ax, t)
-        ax.axvline(0, color=t["ink2"], lw=1, zorder=1)
-        rows = []
-        for i, (ty, _) in enumerate(FAIL):
-            for off, scope, filled in [(-0.15, "reviewed_pooled", True), (0.15, "unreviewed_pooled", False)]:
-                d = n[scope]["diffs"][f"{ty}-{base}"]
-                rows.append((i + off, d["diff"], d["ci"][0], d["ci"][1], filled))
-        _diff_rows(ax, t, rows, t["s2"])
-        ax.set_xlim(-70, 35)
-        ax.set_xticks([-60, -40, -20, 0, 20])
-        ax.set_title(title, fontsize=11, color=t["ink"], loc="left")
-        ax.set_xlabel("Points (intended failure minus helpful answer)", fontsize=9.5, color=t["ink2"])
-    axes[0].set_yticks(range(len(FAIL)))
-    axes[0].set_yticklabels([lab for _, lab in FAIL], fontsize=11, color=t["ink"])
-    axes[0].set_ylim(len(FAIL) - 0.5, -0.6)
-    leg = [plt.Line2D([], [], marker="o", ls="", ms=8, color=t["s2"], label="10 reviewed questions"),
-           plt.Line2D([], [], marker="o", ls="", ms=8, markerfacecolor=t["surface"], markeredgecolor=t["s2"], markeredgewidth=2,
-                      label="20 unreviewed questions")]
-    fig.legend(handles=leg, loc="upper right", bbox_to_anchor=(0.985, 0.90), ncol=2, frameon=False, fontsize=10, labelcolor=t["ink2"])
-    fig.text(0.01, 0.985, "Which intended failures does the score penalize?", fontsize=14, color=t["ink"], weight="bold", va="top")
-    fig.text(0.01, 0.925, "Left of the line = scored below the helpful answer to the same question. Mean and 95% interval.",
+    j = pd.read_csv(P1 / "10-models/judge_reference.csv")
+    j = j[(j.scope == "all") & (j.judge == "pooled")].set_index("type")
+    fig, ax = plt.subplots(figsize=(8.2, 3.9), facecolor=t["surface"])
+    _style(ax, t)
+    ax.axvline(0, color=t["ink2"], lw=1, zorder=1)
+    for i, (ty, _) in enumerate(FAIL):
+        r = j.loc[ty]
+        clear = r.ci_hi < 0 or r.ci_lo > 0
+        c = t["s2"] if clear else t["ink2"]
+        ax.plot([r.ci_lo, r.ci_hi], [i, i], color=c, lw=2.2, solid_capstyle="round", zorder=2)
+        ax.plot(r.diff_vs_excerpt_mean, i, "o", ms=9, color=c if clear else t["surface"], markeredgecolor=c, markeredgewidth=2, zorder=3)
+        ax.text(r.ci_hi + 1.5, i, f"{r.diff_vs_excerpt_mean:+.0f}".replace("-", "\u2212"), va="center", fontsize=10, color=t["ink2"])
+    ax.set_yticks(range(len(FAIL)))
+    ax.set_yticklabels([lab for _, lab in FAIL], fontsize=11, color=t["ink"])
+    ax.set_ylim(len(FAIL) - 0.5, -0.6)
+    ax.set_xlim(-62, 22)
+    ax.set_xticks([-60, -40, -20, 0, 20])
+    ax.set_xlabel("ANIMA points compared with a helpful answer to the same question", fontsize=9.5, color=t["ink2"])
+    fig.text(0.01, 0.985, "Which failures does the score penalize?", fontsize=14, color=t["ink"], weight="bold", va="top")
+    fig.text(0.01, 0.915, "30 questions, judges pooled, 95% intervals. Filled: clearly below the helpful answer. Hollow: no clear difference.",
              fontsize=10, color=t["ink2"], va="top")
-    fig.subplots_adjust(left=0.17, right=0.985, top=0.76, bottom=0.14, wspace=0.08)
+    fig.subplots_adjust(left=0.24, right=0.97, top=0.80, bottom=0.17)
     _save(fig, "reference_diff", mode, t)
 
 
@@ -263,15 +259,67 @@ def judges(mode: str) -> None:
     ax.set_yticklabels([lab for _, lab in FAIL], fontsize=11, color=t["ink"])
     ax.set_ylim(len(FAIL) - 0.5, -0.6)
     ax.set_xlim(-65, 30)
-    ax.set_xlabel("Points vs the two helpful answers (their mean), 30 questions", fontsize=9.5, color=t["ink2"])
+    ax.set_xlabel("ANIMA points compared with a helpful answer to the same question, 30 questions", fontsize=9.5, color=t["ink2"])
     leg = [plt.Line2D([], [], marker=JUDGE_STYLE[n][1], ls="-", lw=2, ms=8, color=t[JUDGE_STYLE[n][0]], label=n)
            for n in ["Claude Haiku 5.5", "GPT-6 Luna", "Jev 1.13"]]
     ax.legend(handles=leg, loc="lower right", bbox_to_anchor=(1.0, 1.0), ncol=3, frameon=False, fontsize=10, labelcolor=t["ink2"])
     fig.text(0.01, 0.985, "Which intended failures does each judge penalize?", fontsize=14, color=t["ink"], weight="bold", va="top")
-    fig.text(0.01, 0.925, "Same 180 answers, each judge alone. Left of the line = scored below the two helpful answers. 95% intervals.",
+    fig.text(0.01, 0.925, "Same 180 answers, each judge alone, 95% intervals. Left of the line = scored below the helpful answers.",
              fontsize=10, color=t["ink2"], va="top")
     fig.subplots_adjust(left=0.22, right=0.98, top=0.74, bottom=0.14)
     _save(fig, "judges", mode, t)
+
+
+def jev(mode: str) -> None:
+    """Where the decision model departs from the chat-model judges: by criterion on real answers, and on Moral Consideration
+    for the reference answers (helpful vs moralizing)."""
+    import json
+    t = THEME[mode]
+    a = pd.read_csv(P1 / "10-models/jev_agreement.csv")
+    a = a[a.verdicts_panel_agrees >= 30].copy()
+    a["strict"] = 100 * a.jev_stricter / a.verdicts_panel_agrees
+    a["loose"] = 100 * a.jev_looser / a.verdicts_panel_agrees
+    a = a.sort_values("jev_disagrees_pct", ascending=False).reset_index(drop=True)
+    n = json.loads((P1 / "06-rubrics/reference_numbers.json").read_text())["moral_consideration_by_judge"]
+    fig, (a1, a2) = plt.subplots(1, 2, figsize=(9.6, 6.0), gridspec_kw={"width_ratios": [1.25, 1]}, facecolor=t["surface"])
+    for ax in (a1, a2):
+        _style(ax, t)
+    jc = t["s3"]
+    y = range(len(a))
+    a1.barh(list(y), a.strict, height=0.62, color=jc, lw=0, label="Jev fails what both passed")
+    a1.barh(list(y), a.loose, left=a.strict + 0.4, height=0.62, color=jc, alpha=0.38, lw=0, label="Jev passes what both failed")
+    for i, r in a.iterrows():
+        a1.text(r.strict + r.loose + 1.2, i, f"{r.jev_disagrees_pct:.0f}%", va="center", fontsize=9, color=t["ink2"])
+    a1.set_yticks(list(y))
+    a1.set_yticklabels([f"{c} ({n_})" for c, n_ in zip(a.criterion, a.verdicts_panel_agrees)], fontsize=10, color=t["ink"])
+    a1.set_ylim(len(a) - 0.5, -0.6)
+    a1.set_xlim(0, 30)
+    a1.set_xlabel("% of verdicts where both panel\njudges agreed (count in brackets)", fontsize=10, color=t["ink2"])
+    a1.set_title("Real answers: how often Jev\noverrules the panel", fontsize=11, color=t["ink"], loc="left")
+    a1.legend(loc="lower right", frameon=False, fontsize=9, labelcolor=t["ink2"], handlelength=1.2)
+    judges = [("haiku", "Claude Haiku 5.5"), ("luna", "GPT-6 Luna"), ("jev", "Jev 1.13")]
+    for k, (jk, name) in enumerate(judges):
+        col, mk = JUDGE_STYLE[name]
+        c = t[col]
+        helpful = 100 * (n[jk]["openai_spec"] + n[jk]["anthropic_spec"]) / 2
+        moral = 100 * n[jk]["preachy"]
+        a2.plot([helpful, moral], [k, k], color=c, lw=2, zorder=2)
+        a2.plot(helpful, k, mk, ms=9, color=t["surface"], markeredgecolor=c, markeredgewidth=2, zorder=3)
+        a2.plot(moral, k, mk, ms=9, color=c, markeredgecolor=t["surface"], markeredgewidth=1.2, zorder=3)
+        a2.text(helpful, k - 0.3, f"{helpful:.0f}%", ha="center", fontsize=9.5, color=t["ink2"])
+        a2.text(moral, k - 0.3, f"{moral:.0f}%", ha="center", fontsize=9.5, color=t["ink2"])
+    a2.set_yticks(range(3))
+    a2.set_yticklabels([nm for _, nm in judges], fontsize=10, color=t["ink"])
+    a2.set_ylim(2.7, -0.7)
+    a2.set_xlim(0, 100)
+    a2.set_xlabel("% passed on\nMoral Consideration", fontsize=10, color=t["ink2"])
+    a2.set_title("Reference answers", fontsize=11, color=t["ink"], loc="left")
+    a2.text(1, 2.45, "hollow: helpful  ·  filled: moralizing", fontsize=9, color=t["ink2"])
+    fig.text(0.01, 0.985, "Where Jev departs from the chat-model judges", fontsize=14, color=t["ink"], weight="bold", va="top")
+    fig.text(0.01, 0.94, "Close to the panel on practical criteria; far stricter on Moral Consideration, except for answers that moralize.",
+             fontsize=10, color=t["ink2"], va="top")
+    fig.subplots_adjust(left=0.33, right=0.98, top=0.82, bottom=0.14, wspace=0.55)
+    _save(fig, "jev", mode, t)
 
 
 def models(mode: str) -> None:
@@ -290,7 +338,7 @@ def models(mode: str) -> None:
     for _, r in panel.iterrows():
         a1.text(r.ci_hi + 1.0, y[r.model], f"{r.score:.1f}", va="center", fontsize=9.5, color=t["ink2"])
     a1.set_xlim(45, 85)
-    a1.set_xlabel("ANIMA score (0-100), two-judge panel", fontsize=10, color=t["ink2"])
+    a1.set_xlabel("ANIMA score (0-100), panel of two judges", fontsize=10, color=t["ink2"])
     a1.set_title("ANIMA score, 95% interval", fontsize=11, color=t["ink"], loc="left")
     for jn, off in [("Claude Haiku 5.5", -0.13), ("GPT-6 Luna", 0.13)]:
         col, mk = JUDGE_STYLE[jn]
@@ -301,7 +349,7 @@ def models(mode: str) -> None:
             a2.plot(100 * r.moralizing_share, yy, mk, ms=7.5, color=t[col], markeredgecolor=t["surface"], markeredgewidth=1.2, zorder=3)
     a2.set_xlim(0, 60)
     a2.set_xlabel("% of answers flagged", fontsize=10, color=t["ink2"])
-    a2.set_title("Flagged for excessive moral commentary", fontsize=11, color=t["ink"], loc="left")
+    a2.set_title("Answers flagged for moralizing", fontsize=11, color=t["ink"], loc="left")
     a1.set_yticks(range(len(order)))
     a1.set_yticklabels(order, fontsize=11, color=t["ink"])
     a1.set_ylim(len(order) - 0.5, -0.6)
@@ -321,13 +369,13 @@ def models(mode: str) -> None:
         (P1 / "10-models" / "models_alt.txt").write_text(
             "Two panels with one row per model, ordered by ANIMA score. Left, ANIMA score under the two-judge panel: " + ", ".join(parts)
             + " (95 percent intervals about 10 points wide). Right, share of answers flagged for "
-            "excessive moral commentary by Claude Haiku 5.5 and GPT-6 Luna, in that order: " + ", ".join(flags) + ".")
+            "moralizing by Claude Haiku 5.5 and GPT-6 Luna, in that order: " + ", ".join(flags) + ".")
 
 
 if __name__ == "__main__":
     fns = {"coverage": coverage, "coverage_summary": coverage_summary, "reference": reference, "reference_diff": reference_diff,
-           "judges": judges, "models": models}
-    todo = ["coverage", "coverage_summary", "reference_diff", "judges", "models"] if sys.argv[1] == "all" else [sys.argv[1]]
+           "judges": judges, "jev": jev, "models": models}
+    todo = ["coverage", "coverage_summary", "reference_diff", "judges", "jev", "models"] if sys.argv[1] == "all" else [sys.argv[1]]
     for name in todo:
         for mode in ("light", "dark"):
             fns[name](mode)

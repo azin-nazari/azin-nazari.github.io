@@ -235,11 +235,13 @@ def reference_judges() -> None:
     s = pd.read_csv(R / "reference_scores.csv")
     types = ["openai_spec", "anthropic_spec", "preachy", "refusal", "shotgun", "warm_wrong"]
     rows = []
-    for scope in ["all", "reviewed"]:
+    for scope in ["all", "reviewed", "unreviewed"]:
         for j in ["haiku", "luna", "jev", "pooled"]:
             d = s[s.judge == j]
             if scope == "reviewed":
                 d = d[d.reviewed]
+            elif scope == "unreviewed":
+                d = d[~d.reviewed]
             m = d.groupby(["question_id", "type"]).score.mean().unstack()[types].dropna() * 100
             base = (m["openai_spec"] + m["anthropic_spec"]) / 2
             idx = rng.integers(0, len(m), size=(4000, len(m)))

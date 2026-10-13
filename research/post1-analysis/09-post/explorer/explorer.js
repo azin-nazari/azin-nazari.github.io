@@ -33,6 +33,38 @@
   const f1 = (x) => (x === null || x === undefined ? "–" : Number(x).toFixed(1));
   const f0 = (x) => (x === null || x === undefined ? "–" : Math.round(Number(x)).toString());
   const scorerLabel = (k) => S.scorers.find((s) => s.key === k).label;
+  const rationales = {};
+
+  // Minimal, safe Markdown: the text is escaped first, then only headings, emphasis, code, lists and paragraphs become tags.
+  function md(text) {
+    const esc = (t) => t.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    const inline = (t) => esc(t).replace(/`([^`]+)`/g, "<code>$1</code>").replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
+      .replace(/(^|[^*])\*([^*\s][^*]*)\*/g, "$1<em>$2</em>").replace(/__([^_]+)__/g, "<strong>$1</strong>");
+    const out = []; let list = null, para = [];
+    const flush = () => { if (para.length) { out.push(`<p>${inline(para.join(" "))}</p>`); para = []; } };
+    const close = () => { if (list) { out.push(`</${list}>`); list = null; } };
+    const lines = String(text).split("\n");
+    const nextItemKind = (i) => { for (let k = i + 1; k < lines.length; k++) { const t = lines[k].trim(); if (!t) continue;
+      return /^\d+[.)]\s/.test(t) ? "ol" : /^[-*•]\s/.test(t) ? "ul" : null; } return null; };
+    for (let i = 0; i < lines.length; i++) {
+      const raw = lines[i];
+      const line = raw.trimEnd();
+      let m;
+      if (!line.trim()) { flush(); if (list && nextItemKind(i) !== list) close(); continue; }
+      if ((m = line.match(/^\s*(#{1,6})\s+(.*)$/))) { flush(); close(); out.push(`<p class="mx-md-h">${inline(m[2])}</p>`); continue; }
+      if (/^\s*(-{3,}|\*{3,})\s*$/.test(line)) { flush(); close(); out.push("<hr>"); continue; }
+      if ((m = line.match(/^\s*[-*•]\s+(.*)$/)) || (m = line.match(/^\s*(\d+)[.)]\s+(.*)$/))) {
+        flush(); const kind = /^\s*\d/.test(line) ? "ol" : "ul";
+        const num = kind === "ol" ? Number(m[1]) : null, body = kind === "ol" ? m[2] : m[1];
+        if (list !== kind) { close(); out.push(kind === "ol" && num > 1 ? `<ol start="${num}">` : `<${kind}>`); list = kind; }
+        out.push(`<li>${inline(body)}</li>`); continue;
+      }
+      if (list && /^\s{2,}\S/.test(raw)) { out[out.length - 1] = out[out.length - 1].replace(/<\/li>$/, " " + inline(line.trim()) + "</li>"); continue; }
+      close(); para.push(line.trim());
+    }
+    flush(); close();
+    const div = document.createElement("div"); div.className = "mx-md"; div.innerHTML = out.join(""); return div;
+  }
 
   function controls() {
     const sel = el("select", { id: "mx-scorer", "aria-label": "Which judge's ANIMA score to show", onchange: (e) => { state.scorer = e.target.value; render(); } },
@@ -51,8 +83,8 @@
   function legend() {
     return el("div", { class: "mx-legend", "aria-hidden": "true" },
       el("span", {}, el("i", { class: "mx-key-bar" }), " ANIMA score, 95% interval"),
-      el("span", { class: "j-haiku" }, el("b", { text: "●" }), " flags by Claude Haiku 5.5"),
-      el("span", { class: "j-luna" }, el("b", { text: "■" }), " flags by GPT-6 Luna"),
+      el("span", { class: "j-haiku" }, el("b", { text: "●" }), " moralizing flags by Claude Haiku 5.5"),
+      el("span", { class: "j-luna" }, el("b", { text: "■" }), " moralizing flags by GPT-6 Luna"),
       el("span", { class: "mx-scale" }, `Score track ${S_MIN}–${S_MAX}; flag track 0–${F_MAX}%`));
   }
 
@@ -89,7 +121,7 @@
     });
     const axis = (lo, hi, ticks, unit) => el("div", { class: "mx-axis" }, ticks.map((t) => el("span", { style: `left:${pct(t, lo, hi)}` }, `${t}${unit}`)));
     return el("div", { class: "mx-chart" },
-      el("div", { class: "mx-head" }, el("span", {}, "Model"), el("span", {}, "ANIMA score (0–100)"), el("span", {}, ""), el("span", {}, "Flagged for excessive moral commentary")),
+      el("div", { class: "mx-head" }, el("span", {}, "Model"), el("span", {}, "ANIMA score (0–100)"), el("span", {}, ""), el("span", { title: "Share of answers a labeller judged to add moral commentary the user did not ask for and the answer does not need" }, "Flagged for moralizing")),
       rows,
       el("div", { class: "mx-foot" }, el("span", {}), axis(S_MIN, S_MAX, [40, 50, 60, 70, 80], ""), el("span", {}), axis(0, F_MAX, [0, 20, 40, 60], "%")));
   }
@@ -100,7 +132,7 @@
     const fl = S.flags[m.name] || {};
     const scoreRows = S.scorers.map((s) => {
       const d = (S.scores[s.key] || {})[m.name];
-      return el("tr", { class: s.key === state.scorer ? "mx-cur" : "" }, el("th", { scope: "row", text: s.key === "panel" ? "Two-judge panel" : s.label }),
+      return el("tr", { class: s.key === state.scorer ? "mx-cur" : "" }, el("th", { scope: "row", text: s.key === "panel" ? "Panel (Haiku + Flash-Lite)" : s.label }),
         el("td", {}, d ? `${f1(d.score)} (${f1(d.lo)} to ${f1(d.hi)})` : "not graded"),
         el("td", {}, d && d.rank ? `${d.rank} of 6 (${d.rank_lo}–${d.rank_hi})` : "–"));
     });
@@ -135,7 +167,7 @@
         el("table", { class: "mx-table" }, el("caption", {}, "ANIMA score by scorer, 95% interval and rank range from resampling questions"),
           el("thead", {}, el("tr", {}, el("th", { scope: "col" }, "Scorer"), el("th", { scope: "col" }, "Score"), el("th", { scope: "col" }, "Rank"))),
           el("tbody", {}, scoreRows)),
-        el("table", { class: "mx-table" }, el("caption", {}, "Labels from two judges on the same answers"),
+        el("table", { class: "mx-table" }, el("caption", {}, "Moralizing labels from two judges on the same answers (not part of ANIMA)"),
           el("thead", {}, el("tr", {}, el("th", { scope: "col" }, "Labeller"), el("th", { scope: "col" }, "Flagged for moralizing"), el("th", { scope: "col" }, "Answers"),
             el("th", { scope: "col" }, "Attempted the task"), el("th", { scope: "col" }, "Bare refusals"))),
           el("tbody", {}, flagRows))),
@@ -184,18 +216,34 @@
         /Answer:\s*$/.test(it.q) ? el("p", { class: "mx-note" }, "The dataset's prompt ends with the template marker ", el("code", {}, "Answer:"), ", sent as is.") : null),
       el("details", { class: "ex ex-answer", open: it.words <= 250 },
         el("summary", {}, el("span", { class: "ex-label" }, `Answer · ${it.words} words · original language, not translated`)),
-        el("div", { class: "mx-answer" }, it.answer)),
+        el("div", { class: "mx-answer" }, md(it.answer))),
       el("div", { class: "ex ex-verdict" },
-        el("span", { class: "ex-label" }, `Verdicts · ANIMA score ${it.score === null ? "–" : f0(it.score)} from the two-judge panel`),
+        el("span", { class: "ex-label" }, `Verdicts · ANIMA score ${it.score === null ? "–" : f0(it.score)} from the panel (votes averaged)`),
         el("div", { class: "table-responsive" }, el("table", { class: "mx-table" },
-          el("thead", {}, el("tr", {}, el("th", { scope: "col" }, "Criterion"), judges.map((j) => el("th", { scope: "col" }, el("span", { class: JUDGE[j].cls, text: JUDGE[j].mark + " " }), j)))),
+          el("thead", {}, el("tr", {}, el("th", { scope: "col" }, "Criterion"), judges.map((j) => el("th", { scope: "col" }, el("span", { class: JUDGE[j].cls, text: JUDGE[j].mark + " " }), j === "Jev 1.13" ? "Jev 1.13 (probability)" : j)))),
           el("tbody", {}, crit.map(([c, v]) => el("tr", {}, el("th", { scope: "row", text: c }), judges.map((j) => cell(j, v[j]))))))),
+        whyBlock(it),
         el("ul", { class: "mx-labels" }, LABELLERS.map((j) => {
           const l = it.labels[j];
           if (!l) return el("li", {}, `${j}: no label`);
           return el("li", {}, el("span", { class: JUDGE[j].cls, text: JUDGE[j].mark + " " }), el("b", { text: `${j}: ` }),
             l.moralizing === "yes" ? "flagged for moralizing. " : "not flagged. ", l.refusal === "yes" ? "Bare refusal. " : "", el("q", {}, l.reason));
         }))));
+  }
+
+  function whyBlock(it) {
+    const m = S.models.find((x) => x.name === state.model);
+    const r = m && rationales[m.slug];
+    if (!r) return el("p", { class: "mx-note" }, "Loading the judges' reasoning…");
+    const per = r[String(it.id)];
+    if (!per) return el("p", { class: "mx-note" }, "No written reasoning saved for this answer.");
+    return el("div", { class: "mx-why" },
+      el("p", { class: "mx-note" }, "Each panel judge explains its verdict before giving it. GPT-6 Luna's re-grade kept verdicts only; Jev 1.13 returns a probability without text."),
+      Object.entries(per).flatMap(([crit, vsets]) => Object.entries(vsets).map(([vs, byJudge]) =>
+        el("details", { class: "mx-whyc" },
+          el("summary", {}, `Why: ${crit}${Object.keys(vsets).length > 1 ? ` (variant ${Number(vs) + 1})` : ""}`),
+          ["Claude Haiku 5.5", "Gemini 3.5 Flash-Lite"].filter((j) => byJudge[j]).map((j) =>
+            el("div", { class: "mx-whyj" }, el("b", {}, el("span", { class: JUDGE[j].cls, text: JUDGE[j].mark + " " }), j), md(byJudge[j])))))));
   }
 
   async function loadItems(m) {
@@ -205,6 +253,13 @@
       state.items[m.slug] = await r.json();
     } catch (e) {
       state.items[m.slug] = [];
+    }
+    render();
+    try {
+      const r = await fetch(`${base}rationales_${m.slug}.json`);
+      rationales[m.slug] = await r.json();
+    } catch (e) {
+      rationales[m.slug] = {};
     }
     render();
   }
@@ -227,7 +282,7 @@
     root.replaceChildren(
       el("p", { class: "mx-title" }, el("b", { text: "Six models, two different measurements" }), el("span", { text: " · select a model to see every answer behind its numbers" })),
       controls(), legend(), chart(),
-      el("p", { class: "mx-scope" }, "Six model versions, 114 ANIMA questions, one answer each. Moralizing flags are two judges' labels, not verified errors. ",
+      el("p", { class: "mx-scope" }, "Six model versions, 114 ANIMA questions, one answer each. The panel's two votes are averaged per criterion (a split counts as half). Moralizing flags are two judges' labels, not verified errors. ",
         el("a", { href: "#methods-limitations-and-data" }, "How I measured this"), " · ", el("a", { href: DATA }, "all data")),
       el("div", { "aria-live": "polite" }, evidence()));
     if (focusId) { const b = [...root.querySelectorAll("button")].find((x) => x.textContent === focusId); if (b) b.focus(); }
