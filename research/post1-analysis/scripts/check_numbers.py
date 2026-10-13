@@ -159,7 +159,7 @@ def main() -> None:
     mcj = n["moral_consideration_by_judge"]["jev"]
     has(f"Jev passed {round(100 * (mcj['openai_spec'] + mcj['anthropic_spec']) / 2)}% of the helpful answers on Moral Consideration, "
         f"but {pct(mcj['preachy'])} of the moralizing ones", "jev reference MC")
-    assert 0.45 <= mcj["preachy"] <= 0.55                                               # "passed half the lectures"
+    assert 0.45 <= mcj["preachy"] <= 0.55                                               # "passed half the moralizing answers"
     # models
     sc = pd.read_csv(P1 / "10-models/model_scores.csv")
     pn = sc[sc.scorer.str.startswith("Panel")].set_index("model")
